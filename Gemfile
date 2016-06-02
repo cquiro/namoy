@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.4.0'
+  gem 'factory_girl_rails', '~> 4.7.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -22,6 +24,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  gem 'capybara', '~> 2.7.1'
+  gem 'capybara-email', '~> 2.5.0'
 end
 
 group :production do
