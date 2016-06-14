@@ -1,16 +1,13 @@
 class StaticPagesController < ApplicationController
-  def about
+  def products
   end
 
-  def products
+  def uses
   end
 
   def locations
   end
 
-  def store
-  end
-
-  def contact
+  def about
   end
 end
