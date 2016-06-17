@@ -1,0 +1,296 @@
+$namoy-brown: #A6632D;//#7B4014;
+$namoy-yellow: #E7AC10;
+$namoy-orange: #FFA901;
+$namoy-green: #ADDC00;
+$namoy-white: #FFFFFF;
+
+/* CUSTOM FONTS
+-------------------------------------------------- */
+@font-face {
+  font-family: "Besom";
+  src: url(/assets/Besom-free-font.ttf) format("truetype");
+}
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: $namoy-brown;//#5a5a5a;
+}
+
+.green {
+  color: $namoy-green;
+}
+
+.orange {
+  color: $namoy-orange;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $namoy-white;
+  &:hover {
+    color: $namoy-orange;
+  }
+}
+
+#language {
+  color: $namoy-green;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+  color: $namoy-white;
+  background: none;
+  border-bottom: 2px solid $namoy-green;
+  padding-bottom: 8px;
+  margin-bottom: 5px;
+  &:hover {
+    color: $namoy-orange;
+    background: none;
+  }
+  &:active,
+  &:focus {
+    background: none;
+    color: white;
+  }
+}
+
+.navbar-brand {
+  padding: 10px 0 10px 0;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+
+/* CUSTOMIZE THE JUMBOTRON
+-------------------------------------------------- */
+.jumbomain {
+  background-image: url(http://loremflickr.com/1450/520);
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+/* Position the banner logo */
+.banner-logo {
+  display: block;
+  margin: 81px auto 0 auto;
+}
+
+/* Center button */
+.center {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary, .btn-primary:focus, .btn-primary:hover {
+  border-radius: 4px;
+  border-color: $namoy-green;
+  background-color: $namoy-green;
+  color: $namoy-white;
+  padding: 10px 40px;
+  font-size: 0.9em;
+  &:active {
+    background-color: $namoy-orange;
+    color: $namoy-white;
+    border-color: $namoy-orange;
+    box-shadow: none;
+  }
+}
+
+/* MISSION TAPE
+-------------------------------------------------- */
+
+.mission {
+  width: 100%;
+  background-color: $namoy-white;
+  text-align: center;
+  color: $namoy-green;
+  margin-bottom: 30px;
+  #mission-statement {
+    margin: 30px 0 10px 0; 
+  }
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+.image-responsive {
+  display: block;
+  margin: 0 auto;
+}
+
+.infog {
+  margin: 12px auto;
+}
+
+.marketing h2 {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-size: 1.7em;
+}
+
+
+/* INFOGRAPHIC
+-------------------------------------------------- */
+.infographic {
+  background-color: $namoy-green;
+  margin: 35px 0 25px;
+  padding-bottom: 15px;
+}
+
+
+/* DIVIDER
+------------------------- */
+
+.featurette-divider {
+  margin: 35px 0 20px; /* Space out the Bootstrap <hr> more */
+  border-color: $namoy-brown;
+}
+
+
+/* FOOTER 
+-------------------------------------------------- */
+  
+  footer {
+    font-size: 18px;
+    color: $namoy-brown;
+    a,
+    a:focus {
+      color: $namoy-brown;
+      &:hover {
+       color: $namoy-orange;
+      }
+    }
+    .contact-info {
+      list-style-type: none;
+    }
+    .social-links {
+      margin-top: 10px;
+      text-align: left;
+      li {
+        display: inline;
+        padding-right: 10px;
+      }
+    }
+    #copyright {
+      margin-top: 10px;
+      padding-left: 55px;
+      text-align: left;
+    }
+  }
+
+
+  
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  body {
+    font-size: 21px;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+
+  /* Move nav items on the right away from the rigth edge*/
+  .navbar-right {
+    padding-right: 69px;
+  }
+
+  .navbar-header {
+    padding-left: 39px;
+  }
+
+  /* Make navbar transparent */
+  .transparent {
+    border-width: 0px;
+    background-color: rgba(0,0,0,0.0);
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+  footer {
+    #copyright {
+      text-align: center;
+    }
+    .social-links {
+      text-align: right;
+      padding-right: 30px;
+      margin-bottom: 0;
+      li {
+        display: inline;
+        padding-right: 10px;
+      }
+    }
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
