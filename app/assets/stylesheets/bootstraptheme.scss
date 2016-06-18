@@ -4,6 +4,7 @@ $namoy-orange: #FFA901;
 $namoy-green: #ADDC00;
 $namoy-white: #FFFFFF;
 
+
 /* CUSTOM FONTS
 -------------------------------------------------- */
 @font-face {
@@ -28,6 +29,7 @@ body {
 .orange {
   color: $namoy-orange;
 }
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -88,7 +90,6 @@ body {
 }
 
 
-
 /* CUSTOMIZE THE JUMBOTRON
 -------------------------------------------------- */
 .jumbomain {
@@ -126,6 +127,7 @@ body {
   }
 }
 
+
 /* MISSION TAPE
 -------------------------------------------------- */
 
@@ -146,6 +148,7 @@ body {
   line-height: 1;
   letter-spacing: -1px;
 }
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -175,7 +178,7 @@ body {
 -------------------------------------------------- */
 .infographic {
   background-color: $namoy-green;
-  margin: 35px 0 25px;
+  margin: 35px 0 0;
   padding-bottom: 15px;
 }
 
@@ -193,6 +196,7 @@ body {
 -------------------------------------------------- */
   
   footer {
+    margin-top: 45px;
     font-size: 18px;
     color: $namoy-brown;
     a,
@@ -219,11 +223,6 @@ body {
       text-align: left;
     }
   }
-
-
-  
-
-
 
 
 /* RESPONSIVE CSS
@@ -292,6 +291,7 @@ body {
     }
   }
 }
+
 
 @media (min-width: 992px) {
   .featurette-heading {
