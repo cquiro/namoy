@@ -52,13 +52,13 @@ body {
 }
 
 #language {
-  color: $namoy-green;
+  color: $namoy-orange;
 }
 
 .navbar-default .navbar-nav > li.active > a {
   color: $namoy-white;
   background: none;
-  border-bottom: 2px solid $namoy-green;
+  border-bottom: 2px solid $namoy-orange;
   padding-bottom: 8px;
   margin-bottom: 5px;
   &:hover {
@@ -103,7 +103,7 @@ body {
 /* Position the banner logo */
 .banner-logo {
   display: block;
-  margin: 81px auto 0 auto;
+  margin: 81px auto 54px auto;
 }
 
 /* Center button */
@@ -112,13 +112,56 @@ body {
   margin-top: 30px;
 }
 
-.btn-primary, .btn-primary:focus, .btn-primary:hover {
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+#titulo-nam {
+  margin: 21px auto 15px;
+}
+
+.image-responsive {
+  display: block;
+  margin: 0 auto;
+}
+
+.infog {
+  margin: 36px auto 12px;
+  border: 1px solid $namoy-brown;
+  border-radius: 10px;
+}
+
+.marketing h2 {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-size: 1.7em;
+  &.center {
+    margin-bottom: 0px;
+  }
+}
+
+.underline {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  border-color: $namoy-brown;
+}
+
+#boton-enc {
+  margin: 0 auto 21px;
+}
+
+.btn-primary, .btn-primary:focus {
   border-radius: 4px;
   border-color: $namoy-green;
   background-color: $namoy-green;
   color: $namoy-white;
   padding: 10px 40px;
-  font-size: 0.9em;
+  font-size: 1em;
+  &:hover{
+    border-color: $namoy-orange;
+    background-color: $namoy-orange;
+  }
   &:active {
     background-color: $namoy-orange;
     color: $namoy-white;
@@ -127,60 +170,18 @@ body {
   }
 }
 
-
-/* MISSION TAPE
--------------------------------------------------- */
-
-.mission {
-  width: 100%;
-  background-color: $namoy-white;
-  text-align: center;
-  color: $namoy-green;
-  margin-bottom: 30px;
-  #mission-statement {
-    margin: 30px 0 10px 0; 
-  }
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-.image-responsive {
-  display: block;
-  margin: 0 auto;
-}
-
-.infog {
-  margin: 12px auto;
-}
-
-.marketing h2 {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-  font-size: 1.7em;
-}
-
-.descriptors {
-  margin-top: 42px;
+.spaced {
+  margin-top: 30px;
 }
 
 
 /* INFOGRAPHIC
 -------------------------------------------------- */
-.infographic {
-  background-color: $namoy-green;
-  margin: 35px 0 0;
-  padding-bottom: 15px;
-}
+//.infographic {
+  //background-color: $namoy-green;
+  //margin: 35px 0 0;
+  //padding-bottom: 15px;
+//}
 
 
 /* DIVIDER
@@ -217,6 +218,9 @@ body {
         padding-right: 10px;
       }
     }
+    .separator {
+      border-color: $namoy-brown;
+    }
     #copyright {
       margin-top: 10px;
       padding-left: 55px;
@@ -248,6 +252,19 @@ ul.ideas {
 @media (min-width: 768px) {
   body {
     font-size: 21px;
+  }
+
+  #titulo-nam {
+    margin: 0px auto 24px;
+  }
+  .featurette-divider {
+    margin: 35px 0 20px; /* Space out the Bootstrap <hr> more */
+    border-color: $namoy-white;
+  }
+
+  .underline {
+    margin-top: 30px;
+    margin-bottom: 42px;
   }
 
   /* Navbar positioning foo */
@@ -286,6 +303,14 @@ ul.ideas {
     line-height: 1.4;
   }
 
+  #boton-enc {
+    margin: 0 auto;
+  }
+
+  #infog {
+    margin-top: 0px;
+  }
+
   .featurette-heading {
     font-size: 50px;
   }
@@ -313,5 +338,15 @@ ul.ideas {
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-wrapper {
+    padding-top: 78px;
+  }
+
+  #infog {
+    margin-top: 36px;
   }
 }

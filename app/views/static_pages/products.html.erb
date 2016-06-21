@@ -3,69 +3,73 @@
 <div class="jumbotron jumbomain">
   <div class="logo">
     <%= image_tag("logo_blanco.png", :alt => "Namoy Logo", class: "banner-logo") %>
-    <p class="center"><a class="btn btn-primary btn-lg" href="#" role="button">Encuéntranos</a></p>
   </div>      
 </div><!-- /.jumbotron -->
 
     
 <!-- Namoy mission tape
 ================================================== -->
-<div class="row featurette mission">
-  <div class="col-md-1"> </div>
-  <div class="col-md-10">
-    <h2 class="featurette-heading" id="mission-statement">
-      <i class="fa fa-quote-left" aria-hidden="true"></i> Endulzantes naturales para un estilo de vida libre de alimentos procesados <i class="fa fa-quote-right" aria-hidden="true"></i>
-    </h2>
-  </div><!-- /.col-md-10 -->
-  <div class="col-md-1"> </div>
-</div><!-- /.mision -->
+<div class="container marketing">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="center"> 
+        <i class="fa fa-quote-left orange" aria-hidden="true"></i> Creado especialmente para quienes buscan y practican un estilo de vida sano y libre de alimentos procesados <i class="fa fa-quote-right orange" aria-hidden="true"></i>
+      </h2>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <hr class="underline"> 
+</div><!-- /.container -->
 
 
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 <div class="container marketing">
-  <div class="row">
-    <div class="col-lg-12">
-      <%= image_tag "bodegon_panela.jpg", size: "848x600", alt: "Panela Namoy Product Image", class: "image-responsive" %>
+
+  <div class="row featurette">
+      <div class="col-md-4 col-md-push-8">
+      <div class="content-wrapper"> 
+        <p>
+          <%= image_tag("titulo_namoy.png", :alt => "Namoy panela en polvo", class: "img-responsive", id: "titulo-nam") %>
+        </p>     
+        <p class="lead">
+          Es un edulcorante 100% natural recomendado como 
+          sustituto del azúcar refinado, pues además de cumplir la función 
+          de endulzar, alimenta.
+        </p>
+        <p class="lead">
+          Creado especialmente para quienes buscan y practican un estilo de 
+          vida sano y libre de alimentos procesados.
+        </p>
+        <p id="boton-enc"><a class="btn btn-primary btn-lg" href="/static_pages/locations" role="button">Encuéntranos</a></p>
+        </div><!-- /.content-wrapper -->
+      </div><!-- /.col-md-4 -->
+      
+      <div class="col-md-8 col-md-pull-4">
+        <%= image_tag "bodegon_panela.png", alt: "Panela Namoy Product Image", class: "featurette-image img-responsive center-block" %>
+      </div><!-- /.col-md-8 -->
+  </div><!-- /.container -->
+
+  <hr class="featurette-divider">
+
+  <div class="col-md-4 col-md-push-8">
+    <div class="content-wrapper">  
+      <p class="lead">
+        Tiene como único ingrediente el jugo de caña de azúcar.
+      </p>
+      <p class="lead">
+        Su cultivo proviene de tierras colombianas
+        (América del sur) y gracias a su proceso 100%
+        NATURAL no refinado, garantiza un producto
+        rico en vitaminas A, B, C, D, E y minerales como
+        el fósforo, potasio, hierro, calcio, magnesio,
+        manganeso, zinc y cobre.
+      </p>
     </div>
   </div>
-    
-  <div class="row">
-    <div class="col-lg-12">
-      <%= image_tag "namoy_pan_pol.png", size: "622x60", alt: "Name of the product", class: "image-responsive" %>
-    </div><!-- /.col-lg-12 --> 
-  </div><!-- /.row -->
-  <div class="row">            
-    <div class="col-lg-12">          
-      <h2 class="descriptors"> 
-        <span class="orange">&#10003;</span> Es un edulcorante <span class="orange">100% natural</span> recomendado como sustituto del azúcar refinado, pues además de cumplir la función de endulzar, alimenta. 
-        </h2>
-        <h2 class="descriptors">
-        <span class="orange">&#10003;</span> Es un producto de <span class="orange">origen vegetal</span>, <span class="orange">libre de gluten</span>, <span class="orange">vegano</span> y rico en vitaminas A, B, C, D, E y minerales como el fósforo, potasio, hierro, calcio, magnesio, manganeso, zinc y cobre.  
-      </h2>
-      <h2 class="descriptors">
-        <span class="orange">&#10003;</span> Tiene como único ingrediente el jugo de <span class="orange">caña de azúcar</span>, cultivada en <span class="orange">tierras colombianas</span> (América del sur).
-      </h2>
-    </div><!-- /.col-lg-12 -->
-  </div><!-- /.row -->
-</div><!-- /.container -->
+  <div class="col-md-8 col-md-pull-4">
+    <%= image_tag "infografia2.png", alt: "Infographic of the panela process", class: "featurette-image img-responsive center-block infog", id: "infog" %>
+  </div>
+</div>
 
-<div class="marketing infographic">
-  <div class="row">
-    <div class="col-lg-12">
-      <%= image_tag "infografia2.png", size: "900x500", alt: "Infographic of the panela process", class: "image-responsive infog" %>
-    </div><!-- /.col-lg-12 --> 
-  </div><!-- /.row -->
-</div><!-- /.container -->
-
-<div class="container marketing">
-  <div class="row">
-    <div class="col-lg-12">
-      <h2 class="center"> 
-        <i class="fa fa-quote-left orange" aria-hidden="true"></i> Creado especialmente para quienes buscan y practican un <span class="orange">estilo de vida sano</span> y libre de alimentos procesados <i class="fa fa-quote-right orange" aria-hidden="true"></i>
-      </h2>
-    </div><!-- /.col-lg-12 -->
-  </div><!-- /.row -->      
-</div><!-- /.container -->
 
