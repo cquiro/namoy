@@ -1,6 +1,6 @@
 <div class="jumbotron secontron" id="usesjumbo">
   <div class="container marketing">
-    <h1>Usos</h1>
+    <h1 class="namoy-font">Usos</h1>
   </div>
 </div><!-- /.container -->
 
@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h2 class="center"> 
-        NA-MOY PANELA EN POLVO es amigable contigo y tu cocina.
+        <span class="namoy-font">NA-MOY PANELA EN POLVO</span> es amigable contigo y tu cocina
       </h2>
     </div><!-- /.col-lg-12 -->
   </div><!-- /.row -->
@@ -16,12 +16,12 @@
 </div><!-- /.container -->
 
 <div class="container marketing">
-  <div class="row">
-    <div class="col-lg-12">
-      <p> 
-        Usa tu creatividad en diferentes recetas y encuentra ideas en nuestra página y redes sociales. 
+  <div class="row featurette">
+    <div class="col-md-7 col-md-push-5">
+      <p class="lead"> 
+        Usa tu creatividad en diferentes recetas y encuentra ideas en nuestra página y redes sociales.
       </p>
-      <ul class="ideas">
+      <ul class="ideas lead">
         <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Endulza una taza de café o un té</li>
         <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Cocina y hornea</li>
         <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Decora postres y frutas</li>
@@ -31,6 +31,69 @@
         <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Espolvorea un poco sobre tus alimentos preferidos</li>
         <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Prepara salsas para diferentes platos</li>
       </ul>
-    </div><!-- /.col-lg-12 -->
+    </div><!-- /.col-md-7 -->
+    <div class="col-md-5 col-md-pull-7">
+      <%= image_tag "https://unsplash.it/800/540?image=635", alt: "Table with cups", class: "featurette-image img-responsive center-block" %>
+    </div><!-- /.col-md-5 -->
   </div><!-- /.row -->      
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="center"> 
+        Deliciosas sugerencias para preparar en casa
+      </h2>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <hr class="underline"> 
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=163", alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3>Muffins de chocolate con semillas de chia</h3>
+          <p class="lead">Tiempo de preparación: 40 a 54 minutos</p>
+          <p class="lead">Cantidad: 12 muffins</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=425", alt: "Iced Coffee", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3>Cafe Helado</h3>
+          <p class="lead">Tiempo de preparación: 10 minutos</p>
+          <p class="lead">Cantidad: 1 vaso</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=312", alt: "Caramel Pork", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3>Lomo de cerdo caramelizado</h3>
+          <p>Tiempo de preparación: 50 a 60 minutos</p>
+          <p>Cantidad: 4 personas</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=326", alt: "Lemon Dressing", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3>Vinagreta de limón</h3>
+          <p class="lead">Tiempo de preparación: 5 minutos aprox</p>
+          <p class="lead">Cantidad: 1 copa</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+  </div><!-- /.row -->
+
 </div><!-- /.container -->

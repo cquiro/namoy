@@ -22,6 +22,10 @@ body {
   color: $namoy-brown;//#5a5a5a;
 }
 
+.namoy-font {
+  font-family: "Besom", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .green {
   color: $namoy-green;
 }
@@ -36,6 +40,8 @@ body {
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
+  font-family: "Besom", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
   position: absolute;
   top: 0;
   right: 0;
@@ -93,7 +99,8 @@ body {
 /* CUSTOMIZE THE JUMBOTRON
 -------------------------------------------------- */
 .jumbomain {
-  background-image: url(http://loremflickr.com/1450/520);
+  background-image: url(https://unsplash.it/1450/520?image=307);
+  //490
 }
 
 .jumbotron {
@@ -232,6 +239,7 @@ body {
   /* SECONDARY PAGES
 -------------------------------------------------- */
 .secontron {
+  background-image: url(https://unsplash.it/1450/250?image=490);
   color: $namoy-white;
   padding-top: 66px;
   margin-bottom: 0px;
@@ -243,6 +251,22 @@ body {
 
 ul.ideas {
   list-style-type: none;
+  padding: 0;
+}
+
+
+/* USES
+-------------------------------------------------- */
+
+.thumbnail {
+  border-color: $namoy-brown;
+
+  .caption {
+    p, h3 {
+      color: $namoy-brown;
+      
+    }
+  }  
 }
 
 
@@ -332,6 +356,22 @@ ul.ideas {
       list-style-type: none;
     }
   }
+
+  .thumbnail {
+    width:100%;
+    height:500px;
+    .caption {
+      width:100%;
+      height: auto;
+      p {
+        a {
+          position: absolute;
+          left: 29px;
+          bottom: 34px;
+        }
+      }
+    }  
+  }
 }
 
 
@@ -344,6 +384,10 @@ ul.ideas {
 @media (min-width: 1200px) {
   .content-wrapper {
     padding-top: 78px;
+  }
+
+  #about-wrapper {
+    padding-top: 0;
   }
 
   #infog {
