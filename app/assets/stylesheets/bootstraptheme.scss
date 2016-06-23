@@ -37,9 +37,12 @@ body {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
+nav.navbar.navbar-fixed-top {
+  padding-top: 9;
+}
 
 #navbar {
-  padding-bottom: 6px;
+  padding-bottom: 9px;
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -105,7 +108,6 @@ body {
 -------------------------------------------------- */
 .jumbomain {
   background-image: url(https://unsplash.it/1450/520?image=307);
-  //490
 }
 
 .jumbotron {
@@ -299,7 +301,7 @@ ul.ideas {
   .navbar-wrapper .navbar {
     padding-right: 0;
     padding-left: 0;
-    padding-top: 15px;
+    padding-top: 12px;
   }
 
   /* Move nav items on the right away from the rigth edge*/
