@@ -133,7 +133,7 @@ body {
 }
 
 .infog {
-  margin: 36px auto 12px;
+  margin: 0px auto 12px;
   border: 1px solid $namoy-brown;
   border-radius: 10px;
 }
@@ -181,14 +181,6 @@ body {
   margin-top: 30px;
 }
 
-
-/* INFOGRAPHIC
--------------------------------------------------- */
-//.infographic {
-  //background-color: $namoy-green;
-  //margin: 35px 0 0;
-  //padding-bottom: 15px;
-//}
 
 
 /* DIVIDER
@@ -282,7 +274,7 @@ ul.ideas {
     margin: 0px auto 24px;
   }
   .featurette-divider {
-    margin: 35px 0 20px; /* Space out the Bootstrap <hr> more */
+    margin: 15px 0 0; /* Space out the Bootstrap <hr> more */
     border-color: $namoy-white;
   }
 
@@ -329,10 +321,6 @@ ul.ideas {
 
   #boton-enc {
     margin: 0 auto;
-  }
-
-  #infog {
-    margin-top: 0px;
   }
 
   .featurette-heading {
@@ -383,14 +371,10 @@ ul.ideas {
 
 @media (min-width: 1200px) {
   .content-wrapper {
-    padding-top: 78px;
+    padding-top: 126px;
   }
 
   #about-wrapper {
     padding-top: 0;
-  }
-
-  #infog {
-    margin-top: 36px;
   }
 }
