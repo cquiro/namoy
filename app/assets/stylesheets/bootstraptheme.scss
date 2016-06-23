@@ -53,9 +53,11 @@ nav.navbar.navbar-fixed-top {
    background-color: $namoy-white;
   }
   &:active,
-  &:focus,
   &:hover {
     background-color: $namoy-orange;
+  }
+  &:focus {
+    background-color: transparent;
   }
 }
 
