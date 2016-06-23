@@ -45,6 +45,25 @@ nav.navbar.navbar-fixed-top {
   padding-bottom: 9px;
 }
 
+
+.navbar-default .navbar-toggle {
+  border-color: $namoy-white;
+  color: $namoy-brown;
+  .icon-bar {
+   background-color: $namoy-white;
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $namoy-orange;
+  }
+}
+
+.transparent {
+  border-width: 0px;
+  background-color: transparent;
+}
+
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 
 .navbar-wrapper {
@@ -57,16 +76,17 @@ nav.navbar.navbar-fixed-top {
   z-index: 20;
 }
 
+#language {
+  color: $namoy-orange;
+}
+
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:focus {
   color: $namoy-white;
   &:hover {
     color: $namoy-orange;
+    background: none;
   }
-}
-
-#language {
-  color: $namoy-orange;
 }
 
 .navbar-default .navbar-nav > li.active > a {
@@ -238,9 +258,9 @@ nav.navbar.navbar-fixed-top {
   /* SECONDARY PAGES
 -------------------------------------------------- */
 .secontron {
-  background-image: url(https://unsplash.it/1450/250?image=490);
+  background-image: url(https://unsplash.it/1450/277?image=490);
   color: $namoy-white;
-  padding-top: 66px;
+  padding-top: 105px;
   margin-bottom: 0px;
   h1 {
     margin-top: 45px;
@@ -290,7 +310,7 @@ ul.ideas {
     margin-bottom: 42px;
   }
 
-  /* Navbar positioning foo */
+  /* Navbar positioning */
   .navbar-wrapper {
     margin-top: 20px;
   }
@@ -308,7 +328,6 @@ ul.ideas {
   .navbar-right {
     padding-right: 69px;
   }
-
   .navbar-header {
     padding-left: 39px;
   }
@@ -319,13 +338,7 @@ ul.ideas {
     background-color: rgba(0,0,0,0.0);
   }
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-
+  /* Center Encuentranos button on the product page */
   #boton-enc {
     margin: 0 auto;
   }
@@ -352,6 +365,8 @@ ul.ideas {
     }
   }
 
+
+  /* Fix thumbnails for recipes on Uses page */
   .thumbnail {
     width:100%;
     height:500px;
