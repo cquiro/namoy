@@ -176,7 +176,6 @@ nav.navbar.navbar-fixed-top {
 }
 
 .underline {
-  margin-top: 35px;
   margin-bottom: 20px;
   border-color: $namoy-brown;
 }
@@ -254,6 +253,10 @@ nav.navbar.navbar-fixed-top {
     }
   }
 
+  .nafont {
+    font-family: "Besom", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
 
   /* SECONDARY PAGES
 -------------------------------------------------- */
@@ -288,6 +291,13 @@ ul.ideas {
   }  
 }
 
+.radio-buttons {
+  margin-bottom: 3px;
+}
+
+#under-uses {
+  margin-bottom: 21px;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -306,7 +316,7 @@ ul.ideas {
   }
 
   .underline {
-    margin-top: 30px;
+    margin-top: 21px;
     margin-bottom: 42px;
   }
 
