@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/products'
 
-  get 'uses', to: 'static_pages#uses', as: 'uses'
+  get 'uses', to: 'static_pages#uses'
 
-  get 'locations', to: 'static_pages#locations', as: 'locations'
+  get 'locations', to: 'static_pages#locations'
 
-  get 'about' => 'static_pages#about'
+  get 'about', to: 'static_pages#about'
 
   
 
