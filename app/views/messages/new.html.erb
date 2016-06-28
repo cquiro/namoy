@@ -1,0 +1,100 @@
+<div class="jumbotron secontron" id="locajumbo">
+  <div class="container marketing">
+    <h1 class="namoy-font">Encuéntranos</h1>
+  </div>
+</div><!-- /.container -->
+
+
+<div class="container marketing">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="center"> 
+        <span class="glyphicon glyphicon-map-marker orange smaller-text" aria-hidden="true"></span> Encuentra nuestros productos cerca de ti o escríbenos. <span class="glyphicon glyphicon-map-marker orange smaller-text" aria-hidden="true"></span>
+      </h2>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <hr class="underline"> 
+  
+
+
+<!-- Content
+================================================== -->
+  <div class="row featurette">
+    <div class="col-md-7 col-md-push-5">
+      <div class="content-wrapper" id="about-wrapper"> 
+        <p class="lead">
+          Encuentra nuestros productos en los siguientes lugares:
+        </p>
+      </div><!-- /.content-wrapper -->
+    </div><!-- /.col-md-7 -->
+      
+    <div class="col-md-5 col-md-pull-7">
+    <div class="form-container">
+      <%= form_for @message, url: locations_path do |f| %>
+        <% if @message.errors.any? %>
+          <div id="error_explanation">
+            <h2>
+              <%= "#{pluralize(@message.errors.count, "error")} prohibited this message from being sent:" %>
+            </h2>
+
+            <ul>
+              <% @message.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <p class="notice"><%= flash[:notice] %></p>
+
+        <h1 class="contitle">
+          <i class="fa fa-paper-plane orange"></i> Escríbenos
+        </h1>
+
+        <hr class="orange">
+
+        <div class="form-group">
+          <%= f.label :name, "Nombre", class: "lead" %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, class: "lead" %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :subject, "Asunto", class: "lead" %>
+          <%= f.text_field :subject, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :message, "Mensaje", class: "lead" %>
+          <%= f.text_area :message, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit 'Enviar', class: "btn btn-lg btn-primary", role: "button" %>
+        </div>
+      <% end %>
+      </div>
+    </div><!-- /.col-md-5 -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- contact form -->
+<div class="container marketing">
+
+  
+</div> <!-- end of container -->

@@ -32,6 +32,11 @@ body {
 
 .orange {
   color: $namoy-orange;
+  border-color: orange;
+}
+
+.smaller-text {
+  font-size: 0.7em;
 }
 
 
@@ -274,6 +279,14 @@ nav.navbar.navbar-fixed-top {
 ul.ideas {
   list-style-type: none;
   padding: 0;
+}
+
+.form-container {
+  border: 1px solid $namoy-brown;
+  border-radius: 10px;
+  form {
+    padding: 0px 15px;
+  }
 }
 
 

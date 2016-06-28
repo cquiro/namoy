@@ -6,10 +6,13 @@ Rails.application.routes.draw do
 
   get 'uses', to: 'static_pages#uses'
 
-  get 'locations', to: 'static_pages#locations'
-
   get 'about', to: 'static_pages#about'
 
+  # get 'locations', to: 'static_pages#locations'
+
+  get   'locations',  to:  'messages#new', as: 'locations'
+
+  post  'locations', to: 'messages#create'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
