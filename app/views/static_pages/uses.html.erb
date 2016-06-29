@@ -49,15 +49,15 @@
   <div class="row radio-buttons">
     <div class="col-md-1"></div>
     <div class="col-md-2">
-      <%= radio_button_tag(:flavor, "Natural") %> <i class="fa fa-lemon-o" aria-hidden="true"></i>
+      <%= radio_button_tag(:flavor, "natural") %> <i class="fa fa-lemon-o" aria-hidden="true"></i>
       <%= label_tag(:natural, "Natural", class: "lead") %>
     </div>
     <div class="col-md-2">
-      <%= radio_button_tag(:flavor, "Orange") %> <i class="fa fa-lemon-o orange" aria-hidden="true"></i>
+      <%= radio_button_tag(:flavor, "naranja") %> <i class="fa fa-lemon-o orange" aria-hidden="true"></i>
       <%= label_tag(:orange, "Naranja", class: "lead") %>
     </div>
     <div class="col-md-2">
-      <%= radio_button_tag(:flavor, "Lemon") %> <i class="fa fa-lemon-o green" aria-hidden="true"></i>
+      <%= radio_button_tag(:flavor, "limon") %> <i class="fa fa-lemon-o green" aria-hidden="true"></i>
       <%= label_tag(:lemon, "Limón", class: "lead") %>
     </div>
     <div class="col-md-3">
@@ -70,7 +70,7 @@
     <div class="col-md-2"></div>
   </div><!-- /.row -->
   <div class="row">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 natural">
       <div class="thumbnail">
         <%= image_tag "https://unsplash.it/800/500?image=163", alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %>
         <div class="caption">
@@ -82,7 +82,7 @@
       </div><!-- /.thumbnail -->
     </div><!-- /.col-sm-6 -->
 
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 natural">
       <div class="thumbnail">
         <%= image_tag "https://unsplash.it/800/500?image=425", alt: "Iced Coffee", class: "featurette-image img-responsive center-block" %>
         <div class="caption">
@@ -94,7 +94,7 @@
       </div><!-- /.thumbnail -->
     </div><!-- /.col-sm-6 -->
 
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 naranja">
       <div class="thumbnail">
         <%= image_tag "https://unsplash.it/800/500?image=312", alt: "Caramel Pork", class: "featurette-image img-responsive center-block" %>
         <div class="caption">
@@ -106,7 +106,7 @@
       </div><!-- /.thumbnail -->
     </div><!-- /.col-sm-6 -->
 
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 limon">
       <div class="thumbnail">
         <%= image_tag "https://unsplash.it/800/500?image=326", alt: "Lemon Dressing", class: "featurette-image img-responsive center-block" %>
         <div class="caption">

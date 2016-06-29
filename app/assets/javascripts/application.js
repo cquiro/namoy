@@ -17,7 +17,7 @@
 
 
 
-
+// Add a background to the navbar when scrolling down.
 $(document).ready(function(){
   $(window).scroll(function() { // check if scroll event happened
     if ($(document).scrollTop() > 90) { // check if user scrolled more than 50 from top of the browser window
@@ -28,7 +28,31 @@ $(document).ready(function(){
   });
 });
 
+// Filter the recipes by flavor
+$(document).ready(function(){
+  $( "input" ).on( "click", function() {
+    selection = $("input:checked").val();
+    if (selection === "All") {
+      $(".natural, .naranja, .limon").show();
+    } 
+    else if (selection === "natural") {
+      $(".natural").show();
+      $(".naranja, .limon").hide();
+    } 
+    else if (selection === "naranja") {
+      $(".naranja").show();
+      $(".natural, .limon").hide();
+    } 
+    else if (selection === "limon") {
+      $(".limon").show();
+      $(".naranja, .natural").hide();
+    }
+  });
+});
+ 
+
+// Underline the navbar link that corresponds to the page you are at.
 $(document).on('page:change', function() {
   var path = location.pathname.split('/').pop();
   $('#navbar li a[href="/' + path + '"]').parent().addClass('active');
-})
+});
