@@ -27,3 +27,8 @@ $(document).ready(function(){
     }
   });
 });
+
+$(document).on('page:change', function() {
+  var path = location.pathname.split('/').pop();
+  $('#navbar li a[href="/' + path + '"]').parent().addClass('active');
+})
