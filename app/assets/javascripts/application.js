@@ -29,7 +29,7 @@ $(document).ready(function(){
 });
 
 // Filter the recipes by flavor
-$(document).ready(function(){
+$(document).on('page:change', function(){
   $( "input" ).on( "click", function() {
     selection = $("input:checked").val();
     if (selection === "All") {
