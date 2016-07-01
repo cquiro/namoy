@@ -16,13 +16,6 @@ RSpec.describe StaticPagesController, type: :controller do
     end
   end
 
-  describe "GET #locations" do
-    it "returns http success" do
-      get :locations
-      expect(response).to have_http_status(:success)
-    end
-  end
-
   describe "GET #uses" do
     it "returns http success" do
       get :uses

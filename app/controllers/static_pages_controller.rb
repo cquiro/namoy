@@ -5,9 +5,6 @@ class StaticPagesController < ApplicationController
   def uses
   end
 
-  def locations
-  end
-
   def about
   end
 end
