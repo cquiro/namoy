@@ -15,50 +15,50 @@ RSpec.describe Recipe, type: :model do
   end
 
   it "is invalid without a name" do
-    recipe = Recipe.new(name: nil)
+    recipe = build(:recipe, name: nil)
     recipe.valid?
     expect(recipe.errors[:name]).to include("can't be blank")
   end
 
   it "is invalid without a time_ready" do
-    recipe = Recipe.new(time_ready: nil)
+    recipe = build(:recipe, time_ready: nil)
     recipe.valid?
     expect(recipe.errors[:time_ready]).to include("can't be blank")
   end
 
   it "is invalid without a quantity" do
-    recipe = Recipe.new(quantity: nil)
+    recipe = build(:recipe, quantity: nil)
     recipe.valid?
     expect(recipe.errors[:quantity]).to include("can't be blank")
   end
 
   it "is invalid without a flavor" do
-    recipe = Recipe.new(flavor: nil)
+    recipe = build(:recipe, flavor: nil)
     recipe.valid?
     expect(recipe.errors[:flavor]).to include("can't be blank")
   end
 
   it "is invalid without ingredients" do
-    recipe = Recipe.new(ingredients: nil)
+    recipe = build(:recipe, ingredients: nil)
     recipe.valid?
     expect(recipe.errors[:ingredients]).to include("can't be blank")
   end
 
   it "is invalid without instructions" do
-    recipe = Recipe.new(instructions: nil)
+    recipe = build(:recipe, instructions: nil)
     recipe.valid?
     expect(recipe.errors[:instructions]).to include("can't be blank")
   end
 
   it "is invalid without an image" do
-    recipe = Recipe.new(image: nil)
+    recipe = build(:recipe, image: nil)
     recipe.valid?
     expect(recipe.errors[:image]).to include("can't be blank")
   end
 
   describe Recipe do
     it "has a valid factory" do
-      expect(FactoryGirl.build(:recipe)).to be_valid
+      expect(build(:recipe)).to be_valid
     end
   end
 end
