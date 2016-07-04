@@ -1,0 +1,123 @@
+<div class="jumbotron secontron" id="usesjumbo">
+  <div class="container marketing">
+    <h1 class="namoy-font">Usos</h1>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="center"> 
+        <span class="namoy-font">NA-MOY PANELA EN POLVO</span> es amigable contigo y tu cocina
+      </h2>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <hr class="underline"> 
+</div><!-- /.container -->
+
+<div class="container marketing">
+  <div class="row featurette">
+    <div class="col-md-7 col-md-push-5">
+      <p class="lead"> 
+        Usa tu creatividad en diferentes recetas y encuentra ideas en nuestra página y redes sociales.
+      </p>
+      <ul class="ideas lead">
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Endulza una taza de café o un té</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Cocina y hornea</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Decora postres y frutas</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Endulza un cereal</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Disuelve una cucharada en agua fría, caliente o frappé</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Úsalo como topping en un yogurth dietético o griego</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Espolvorea un poco sobre tus alimentos preferidos</li>
+        <li><span class="glyphicon glyphicon-grain orange" aria-hidden="true"></span> Prepara salsas para diferentes platos</li>
+      </ul>
+    </div><!-- /.col-md-7 -->
+    <div class="col-md-5 col-md-pull-7">
+      <%= image_tag "https://unsplash.it/800/540?image=635", alt: "Table with cups", class: "featurette-image img-responsive center-block" %>
+    </div><!-- /.col-md-5 -->
+  </div><!-- /.row -->      
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="center">
+        Deliciosas sugerencias para preparar en casa
+      </h2>
+    </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+  <hr class="underline" id="under-uses"> 
+
+  <div class="row radio-buttons">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+      <%= radio_button_tag(:flavor, "natural") %> <i class="fa fa-lemon-o" aria-hidden="true"></i>
+      <%= label_tag(:natural, "Natural", class: "lead") %>
+    </div>
+    <div class="col-md-2">
+      <%= radio_button_tag(:flavor, "naranja") %> <i class="fa fa-lemon-o orange" aria-hidden="true"></i>
+      <%= label_tag(:orange, "Naranja", class: "lead") %>
+    </div>
+    <div class="col-md-2">
+      <%= radio_button_tag(:flavor, "limon") %> <i class="fa fa-lemon-o green" aria-hidden="true"></i>
+      <%= label_tag(:lemon, "Limón", class: "lead") %>
+    </div>
+    <div class="col-md-3">
+      <%= radio_button_tag(:flavor, "All", true) %> 
+      <i class="fa fa-lemon-o" aria-hidden="true"></i>
+      <i class="fa fa-lemon-o orange" aria-hidden="true"></i>
+      <i class="fa fa-lemon-o green" aria-hidden="true"></i>
+      <%= label_tag(:lemon, "Todas", class: "lead") %>
+    </div>
+    <div class="col-md-2"></div>
+  </div><!-- /.row -->
+  <div class="row">
+  
+    <div class="col-sm-6 col-md-4 natural">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=163", alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3><i class="fa fa-lemon-o" aria-hidden="true"></i> Muffins de chocolate con semillas de chia</h3>
+          <p class="lead">Tiempo de preparación: 40 a 54 minutos</p>
+          <p class="lead">Cantidad: 12 muffins</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+
+    <div class="col-sm-6 col-md-4 natural">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=425", alt: "Iced Coffee", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3><i class="fa fa-lemon-o" aria-hidden="true"></i> Cafe Helado</h3>
+          <p class="lead">Tiempo de preparación: 10 minutos</p>
+          <p class="lead">Cantidad: 1 vaso</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+
+    <div class="col-sm-6 col-md-4 naranja">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=312", alt: "Caramel Pork", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3><i class="fa fa-lemon-o orange" aria-hidden="true"></i> Lomo de cerdo caramelizado</h3>
+          <p class="lead">Tiempo de preparación: 50 a 60 minutos</p>
+          <p class="lead">Cantidad: 4 personas</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+
+    <div class="col-sm-6 col-md-4 limon">
+      <div class="thumbnail">
+        <%= image_tag "https://unsplash.it/800/500?image=326", alt: "Lemon Dressing", class: "featurette-image img-responsive center-block" %>
+        <div class="caption">
+          <h3><i class="fa fa-lemon-o green" aria-hidden="true"></i> Vinagreta de limón</h3>
+          <p class="lead">Tiempo de preparación: 5 minutos aprox</p>
+          <p class="lead">Cantidad: 1 copa</p>
+          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+        </div><!-- /.caption -->
+      </div><!-- /.thumbnail -->
+    </div><!-- /.col-sm-6 -->
+  </div><!-- /.row -->
+
+</div><!-- /.container -->

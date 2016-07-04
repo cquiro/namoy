@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'recipes/index'
+
+  get 'recipes/show'
+
+  get 'recipes/new'
+
+  get 'recipes/edit'
+
+  get 'recipes/create'
+
+  get 'recipes/update'
+
+  get 'recipes/destroy'
+
   root 'static_pages#products'
 
   get 'static_pages/products'

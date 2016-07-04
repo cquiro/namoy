@@ -1,11 +1,11 @@
 FactoryGirl.define do
   factory :recipe do
-    name "MyString"
-    time_ready "MyString"
-    quantity "MyString"
-    type ""
-    ingredient "MyString"
-    intructions "MyText"
-    image "MyString"
+    sequence(:name) { |n| "Natural#{n}" }
+    time_ready "11 minutes"
+    quantity "6 things"
+    flavor "natural"
+    ingredients "Panela Namoy and something else"
+    instructions "Mix, cool and serve."
+    image "Image"
   end
 end
