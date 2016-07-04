@@ -56,9 +56,7 @@ RSpec.describe Recipe, type: :model do
     expect(recipe.errors[:image]).to include("can't be blank")
   end
 
-  describe Recipe do
-    it "has a valid factory" do
-      expect(build(:recipe)).to be_valid
-    end
-  end
+  it "has a valid factory" do
+    expect(build(:recipe)).to be_valid
+  end  
 end
