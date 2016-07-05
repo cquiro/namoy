@@ -83,10 +83,10 @@
             <h3><i class="fa fa-lemon-o <%= recipe.flavor %>-color" aria-hidden="true"></i> <%= recipe.name %></h3>
             <p class="lead">Tiempo de preparación: <%= recipe.time_ready %></p>
             <p class="lead">Cantidad: <%= recipe.quantity %></p>
-            <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+            <p><%= link_to "Ver receta", recipe, class: "btn btn-primary", role: "button" %></p>
           </div><!-- /.caption -->
         </div><!-- /.thumbnail -->
-      </div><!-- /.col-sm-6 -->   
+      </div><!-- /.col-sm-6 -->
     <% end %>   
   </div><!-- /.row -->
 </div><!-- /.container -->
