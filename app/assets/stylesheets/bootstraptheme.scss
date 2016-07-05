@@ -26,11 +26,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.green {
+.green,
+.limon-color {
   color: $namoy-green;
 }
 
-.orange {
+.orange,
+.naranja-color {
   color: $namoy-orange;
   border-color: orange;
 }

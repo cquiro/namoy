@@ -4,6 +4,7 @@
   </div>
 </div><!-- /.container -->
 
+
 <div class="container marketing">
   <div class="row">
     <div class="col-lg-12">
@@ -15,7 +16,8 @@
   <hr class="underline"> 
 </div><!-- /.container -->
 
-<div class="container marketing">
+
+<div class="container marketing">  
   <div class="row featurette">
     <div class="col-md-7 col-md-push-5">
       <p class="lead"> 
@@ -44,6 +46,7 @@
       </h2>
     </div><!-- /.col-lg-12 -->
   </div><!-- /.row -->
+  
   <hr class="underline" id="under-uses"> 
 
   <div class="row radio-buttons">
@@ -51,73 +54,39 @@
     <div class="col-md-2">
       <%= radio_button_tag(:flavor, "natural") %> <i class="fa fa-lemon-o" aria-hidden="true"></i>
       <%= label_tag(:natural, "Natural", class: "lead") %>
-    </div>
+    </div><!-- /.col-md-2 -->
     <div class="col-md-2">
       <%= radio_button_tag(:flavor, "naranja") %> <i class="fa fa-lemon-o orange" aria-hidden="true"></i>
       <%= label_tag(:orange, "Naranja", class: "lead") %>
-    </div>
+    </div><!-- /.col-md-2 -->
     <div class="col-md-2">
       <%= radio_button_tag(:flavor, "limon") %> <i class="fa fa-lemon-o green" aria-hidden="true"></i>
       <%= label_tag(:lemon, "Limón", class: "lead") %>
-    </div>
+    </div><!-- /.col-md-2 -->
     <div class="col-md-3">
       <%= radio_button_tag(:flavor, "All", true) %> 
       <i class="fa fa-lemon-o" aria-hidden="true"></i>
       <i class="fa fa-lemon-o orange" aria-hidden="true"></i>
       <i class="fa fa-lemon-o green" aria-hidden="true"></i>
       <%= label_tag(:lemon, "Todas", class: "lead") %>
-    </div>
+    </div><!-- /.col-md-3 -->
     <div class="col-md-2"></div>
+  </div><!-- /.radio-buttons -->
+
+  <div class="row">  
+    <p id="notice"><%= notice %></p>
+    <% @recipes.each do |recipe| %>
+      <div class="col-sm-6 col-md-4 <%= recipe.flavor %>">
+        <div class="thumbnail">
+          <%= image_tag "https://unsplash.it/800/500?image=312", alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %> 
+          <div class="caption">
+            <h3><i class="fa fa-lemon-o <%= recipe.flavor %>-color" aria-hidden="true"></i> <%= recipe.name %></h3>
+            <p class="lead">Tiempo de preparación: <%= recipe.time_ready %></p>
+            <p class="lead">Cantidad: <%= recipe.quantity %></p>
+            <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
+          </div><!-- /.caption -->
+        </div><!-- /.thumbnail -->
+      </div><!-- /.col-sm-6 -->   
+    <% end %>   
   </div><!-- /.row -->
-  <div class="row">
-  
-    <div class="col-sm-6 col-md-4 natural">
-      <div class="thumbnail">
-        <%= image_tag "https://unsplash.it/800/500?image=163", alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %>
-        <div class="caption">
-          <h3><i class="fa fa-lemon-o" aria-hidden="true"></i> Muffins de chocolate con semillas de chia</h3>
-          <p class="lead">Tiempo de preparación: 40 a 54 minutos</p>
-          <p class="lead">Cantidad: 12 muffins</p>
-          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
-        </div><!-- /.caption -->
-      </div><!-- /.thumbnail -->
-    </div><!-- /.col-sm-6 -->
-
-    <div class="col-sm-6 col-md-4 natural">
-      <div class="thumbnail">
-        <%= image_tag "https://unsplash.it/800/500?image=425", alt: "Iced Coffee", class: "featurette-image img-responsive center-block" %>
-        <div class="caption">
-          <h3><i class="fa fa-lemon-o" aria-hidden="true"></i> Cafe Helado</h3>
-          <p class="lead">Tiempo de preparación: 10 minutos</p>
-          <p class="lead">Cantidad: 1 vaso</p>
-          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></a></p>
-        </div><!-- /.caption -->
-      </div><!-- /.thumbnail -->
-    </div><!-- /.col-sm-6 -->
-
-    <div class="col-sm-6 col-md-4 naranja">
-      <div class="thumbnail">
-        <%= image_tag "https://unsplash.it/800/500?image=312", alt: "Caramel Pork", class: "featurette-image img-responsive center-block" %>
-        <div class="caption">
-          <h3><i class="fa fa-lemon-o orange" aria-hidden="true"></i> Lomo de cerdo caramelizado</h3>
-          <p class="lead">Tiempo de preparación: 50 a 60 minutos</p>
-          <p class="lead">Cantidad: 4 personas</p>
-          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
-        </div><!-- /.caption -->
-      </div><!-- /.thumbnail -->
-    </div><!-- /.col-sm-6 -->
-
-    <div class="col-sm-6 col-md-4 limon">
-      <div class="thumbnail">
-        <%= image_tag "https://unsplash.it/800/500?image=326", alt: "Lemon Dressing", class: "featurette-image img-responsive center-block" %>
-        <div class="caption">
-          <h3><i class="fa fa-lemon-o green" aria-hidden="true"></i> Vinagreta de limón</h3>
-          <p class="lead">Tiempo de preparación: 5 minutos aprox</p>
-          <p class="lead">Cantidad: 1 copa</p>
-          <p><a href="#" class="btn btn-primary" role="button">Ver receta</a></p>
-        </div><!-- /.caption -->
-      </div><!-- /.thumbnail -->
-    </div><!-- /.col-sm-6 -->
-  </div><!-- /.row -->
-
 </div><!-- /.container -->
