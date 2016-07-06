@@ -46,15 +46,6 @@ body {
   color: $namoy-green;
 }
 
-.subtitle {
-  margin-bottom: 21px;
-  margin-top: 54px;
-}
-
-.ing {
-  margin-top: 12px;
-}
-
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -306,7 +297,7 @@ ul.ideas {
 }
 
 
-/* USES
+/* RECIPES INDEX
 -------------------------------------------------- */
 
 .thumbnail {
@@ -327,6 +318,66 @@ ul.ideas {
 #under-uses {
   margin-bottom: 21px;
 }
+
+#new-recipe-link {
+  color: $namoy-brown;
+  &:active,
+  &:focus,
+  &:hover {
+    color: $namoy-orange;
+  }
+}
+
+.navbar-default .navbar-toggle {
+  border-color: $namoy-white;
+  color: $namoy-brown;
+  .icon-bar {
+   background-color: $namoy-white;
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+
+/* RECIPES SHOW PAGE
+-------------------------------------------------- */
+
+.subtitle {
+  margin-bottom: 21px;
+  margin-top: 54px;
+}
+
+.ing {
+  margin-top: 12px;
+}
+
+/* CREATE-EDIT FORM
+-------------------------------------------------- */
+
+.create-form {
+  padding-top: 45px;
+}
+
+#radio-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    margin-right: 30px;
+    .lead {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#label-flavor {
+  margin-bottom: 0;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

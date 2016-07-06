@@ -29,7 +29,7 @@
     </div><!-- /.col-md-7 -->
       
     <div class="col-md-5 col-md-pull-7">
-    <div class="form-container">
+      <div class="form-container">
       <%= form_for @message, url: locations_path do |f| %>
         <% if @message.errors.any? %>
           <div id="error_explanation">
@@ -77,24 +77,7 @@
           <%= f.submit 'Enviar', class: "btn btn-lg btn-primary", role: "button" %>
         </div>
       <% end %>
-      </div>
+      </div><!-- /.form-conteiner -->
     </div><!-- /.col-md-5 -->
   </div><!-- /.row -->
 </div><!-- /.container -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- contact form -->
-<div class="container marketing">
-
-  
-</div> <!-- end of container -->
