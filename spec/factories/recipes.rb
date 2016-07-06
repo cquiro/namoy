@@ -20,5 +20,10 @@ FactoryGirl.define do
       sequence(:name) { |n| "Limon#{n}" }
       flavor "limon"
     end
+
+    factory :invalid_recipe do
+      name nil
+      falvor "natural"
+    end
   end
 end
