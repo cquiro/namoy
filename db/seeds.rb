@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 recipe1 = Recipe.create(
-            name:         "Muffins de chocolate con semillas de chia",
+            name:         "Muffins de chocolate con semillas de chía",
             time_ready:   "40 a 54 minutos",
             quantity:     "12 muffins", 
             flavor:       "natural",
@@ -26,7 +26,7 @@ Deja Enfriar en el molde 5 minutos ; trasladarlo a una bandeja metálica.",
             image:        "Imagen")
 
 recipe2 = Recipe.create(
-            name:         "Cafe helado",
+            name:         "Café helado",
             time_ready:   "10 minutos",
             quantity:     "1 vaso", 
             flavor:       "natural",
