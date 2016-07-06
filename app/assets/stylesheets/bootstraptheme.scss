@@ -46,6 +46,11 @@ body {
   color: $namoy-green;
 }
 
+/* Justify text */
+.just {
+  text-align: justify;
+}
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -433,6 +438,11 @@ ul.ideas {
     margin: 0 auto;
   }
 
+  /* Add some space to the top of the infographic */
+  .infog {
+    margin-top: 42px;
+  }
+
   .featurette-heading {
     font-size: 50px;
   }
@@ -483,7 +493,7 @@ ul.ideas {
 
 @media (min-width: 1200px) {
   .content-wrapper {
-    padding-top: 126px;
+    padding-top: 42px;
   }
 
   #about-wrapper {
