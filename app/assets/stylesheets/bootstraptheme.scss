@@ -325,6 +325,7 @@ ul.ideas {
 }
 
 #new-recipe-link {
+  text-align: center;
   color: $namoy-brown;
   &:active,
   &:focus,
@@ -357,6 +358,19 @@ ul.ideas {
 
 .ing {
   margin-top: 12px;
+}
+
+.page-links {
+  text-align: center;
+  margin-top: 45px;
+  #back-recipe-link {
+    color: $namoy-brown;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $namoy-orange;
+    }
+  }
 }
 
 /* CREATE-EDIT FORM
