@@ -135,8 +135,20 @@ RSpec.describe RecipesController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "deletes the recipe from the database"
-    it "redirects to recipes#index"
+    before :each do
+      @recipe = create(:natural_recipe)
+    end
+
+    it "deletes the recipe from the database" do
+      expect{
+        delete :destroy, id: @recipe
+      }.to change(Recipe, :count).by(-1)
+    end
+
+    it "redirects to recipes#index" do
+      delete :destroy, id: @recipe
+      expect(response).to redirect_to recipes_url
+    end
   end
 
 end
