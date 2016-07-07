@@ -78,14 +78,59 @@ RSpec.describe RecipesController, type: :controller do
   end
 
   describe "PATCH #update" do
+    before :each do
+      @recipe = create(:natural_recipe, 
+        name: "Syrup", 
+        flavor: "orange" )
+    end
+
     context "with valid attributes" do
-      it "updates the recipe in the database"
-      it "redirects to recipes#show"
+      it "locates the requested @recipe" do
+        patch :update, id: @recipe,
+        recipe: attributes_for(:recipe,
+            name: "Cake",
+            flavor: "natural")
+        expect(assigns(:recipe)).to eq(@recipe)
+      end
+
+      it "updates the recipe in the database" do
+        patch :update, id: @recipe,
+          recipe: attributes_for(:recipe,
+            name: "Cake",
+            flavor: "natural")
+          @recipe.reload
+          expect(@recipe.name).to eq("Cake")
+          expect(@recipe.flavor).to eq("natural")
+          expect(@recipe.quantity).to eq("6 things")
+      end
+
+      it "redirects to recipes#show" do
+        patch :update, id: @recipe,
+          recipe: attributes_for(:recipe,
+            name: "Cake",
+            flavor: "natural")
+        expect(response).to redirect_to @recipe
+      end
     end
 
     context "with invalid attributes" do
-      it "does not save the new recipe in the database"
-      it "re-renders the :edit template"
+      it "does not save the new recipe in the database" do
+        patch :update, id: @recipe,
+          recipe: attributes_for(:recipe,
+            name: "Cake",
+            flavor: nil)
+        @recipe.reload
+        expect(@recipe.name).to eq("Syrup")
+        expect(@recipe.flavor).to eq("orange")
+      end
+
+      it "re-renders the :edit template" do
+        patch :update, id: @recipe,
+          recipe: attributes_for(:recipe,
+            name: "Cake",
+            flavor: nil)
+        expect(response).to render_template :edit
+      end
     end
   end
 
