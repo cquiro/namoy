@@ -4,13 +4,9 @@ Rails.application.routes.draw do
 
   root 'static_pages#products'
 
-  get 'static_pages/products'
-
   get 'uses', to: 'recipes#index'
 
   get 'about', to: 'static_pages#about'
-
-  # get 'locations', to: 'static_pages#locations'
 
   get   'locations',  to:  'messages#new', as: 'locations'
 
