@@ -1,0 +1,89 @@
+<!-- Form
+================================================== -->
+<div class="row featurette create-form">
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+  <div class="col-md-8">
+    <div class="form-container">
+    <%= form_for @recipe do |f| %>
+      <% if @recipe.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= "#{pluralize(@recipe.errors.count, "error")} stopped this recipe from being saved:" %>
+          </h2>
+
+          <ul>
+            <% @recipe.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <p class="notice"><%= flash[:notice] %></p>
+
+      <h1 class="contitle">
+        Receta:
+      </h1>
+
+      <hr class="orange">
+
+      <div class="form-group">
+        <%= f.label :name, "Nombre", class: "lead" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :time_ready, "Tiempo de preparación", class: "lead" %>
+        <%= f.text_field :time_ready, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :quantity, "Cantidad", class: "lead" %>
+        <%= f.text_field :quantity, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :ingredients, "Ingredientes", class: "lead" %>
+        <%= f.text_area :ingredients, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :instructions, "Instrucciones", class: "lead" %>
+        <%= f.text_area :instructions, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :flavor, "Sabor", class: "lead", id: "label-flavor" %>
+      </div>
+
+      <div class="form-group">
+        <ul id="radio-list">
+          <li>
+            <%= f.radio_button :flavor, "natural" %>
+            <%= f.label :flavor_natural, "Natural", class: "lead" %>
+          </li>
+          <li>
+            <%= f.radio_button :flavor, "naranja" %>
+            <%= f.label :flavor_naranja, "Naranja", class: "lead" %>
+          </li>
+          <li>
+            <%= f.radio_button :flavor, "limon" %>
+            <%= f.label :flavor_limon, "Limón", class: "lead" %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :image, "Imagen", class: "lead" %>
+        <%= f.text_area :image, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit 'Guardar', class: "btn btn-lg btn-primary", role: "button" %>
+      </div>
+    <% end %>
+    </div><!-- /.form-conteiner -->
+  </div><!-- /.col-md-5 -->
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+</div><!-- /.row -->
+

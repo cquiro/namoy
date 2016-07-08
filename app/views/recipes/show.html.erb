@@ -1,6 +1,6 @@
 <div class="jumbotron secontron" id="usesjumbo">
   <div class="container marketing">
-    <h1 class="namoy-font"><%= @recipe.name %></h1>
+    <h1 class="namoy-font smaller-title"><%= @recipe.name %></h1>
   </div>
 </div><!-- /.container -->
 
@@ -25,7 +25,7 @@
       <p> 
         <ul class="ideas lead">
         <% @recipe.string_to_array(@recipe.instructions).each do |instruction| %>
-          <li class="ing">
+          <li class="ing just">
             <span class="glyphicon glyphicon-grain <%= @recipe.flavor %>-color" aria-hidden="true"></span> 
             <%= instruction %>
           </li>
@@ -34,5 +34,11 @@
       </p>
     </div><!-- /.col-lg-12 -->
   </div><!-- /.row -->
-  <p class="page-links"><%= link_to 'Volver', recipes_path, id: "back-recipe-link" %></p>
+
+  <p class="page-links">
+    <%= link_to 'Ir a recetas', recipes_path, class: "recipe-link" %> <span class="orange">|</span> 
+    <%= link_to 'Editar', edit_recipe_path(@recipe), class: "recipe-link" %> <span class="orange">|</span>  
+    <%= link_to 'Eliminar receta', @recipe, method: :delete, data: { confirm: '¿Seguro que quieres eliminar esta receta?' }, class: "recipe-link" %>
+    
+  </p>
 </div><!-- /.container -->

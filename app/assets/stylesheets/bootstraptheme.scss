@@ -363,7 +363,7 @@ ul.ideas {
 .page-links {
   text-align: center;
   margin-top: 45px;
-  #back-recipe-link {
+  .recipe-link {
     color: $namoy-brown;
     &:active,
     &:focus,
@@ -401,6 +401,12 @@ ul.ideas {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media (min-width: 768px) {
+  h1.smaller-title {
+    font-size: 2.1em;
+  }
+}
+
 @media (min-width: 930px) {
   body {
     font-size: 21px;
@@ -417,6 +423,10 @@ ul.ideas {
   .underline {
     margin-top: 21px;
     margin-bottom: 42px;
+  }
+
+  h1.smaller-title {
+    font-size: 2.1em;
   }
 
   /* Navbar positioning */
@@ -512,5 +522,9 @@ ul.ideas {
 
   #about-wrapper {
     padding-top: 0;
+  }
+
+  h1.smaller-title {
+    font-size: 2.7em;
   }
 }
