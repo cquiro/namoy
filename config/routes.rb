@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   resources :recipes
 
-  root 'static_pages#products'
+  root  'static_pages#products'
 
-  get 'uses', to: 'recipes#index'
+  get   'uses', to: 'recipes#index'
 
-  get 'about', to: 'static_pages#about'
+  get   'about', to: 'static_pages#about'
 
   get   'locations',  to:  'messages#new', as: 'locations'
 
