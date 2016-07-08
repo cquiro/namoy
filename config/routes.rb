@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/products'
 
-  get 'uses', to: 'static_pages#uses'
+  get 'uses', to: 'recipes#index'
 
   get 'about', to: 'static_pages#about'
 
