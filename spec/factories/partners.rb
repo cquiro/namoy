@@ -1,10 +1,11 @@
 FactoryGirl.define do
   factory :partner do
-    country "MyString"
-    city "MyString"
-    logo "MyString"
-    instagram "MyString"
-    facebook "MyString"
-    website "MyString"
+    name "Namoy"
+    country "Colombia"
+    city "Bogota"
+    logo "Image"
+    instagram "https://www.instagram.com/namoy_realfoods"
+    facebook "https://www.facebook.com/namoynatural"
+    website "www.namoy.co"
   end
 end
