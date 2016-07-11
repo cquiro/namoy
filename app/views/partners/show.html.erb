@@ -1,0 +1,15 @@
+<div class="jumbotron secontron" id="usesjumbo">
+  <div class="container marketing">
+    <h1 class="namoy-font smaller-title"><%= @partner.name %></h1>
+  </div>
+</div><!-- /.container -->
+
+
+<div class="container marketing">
+
+  <p class="page-links">
+    <%= link_to 'Ir a distribuidores', partners_path, class: "recipe-link" %> <span class="orange">|</span> 
+    <%= link_to 'Editar', edit_partner_path(@partner), class: "recipe-link" %> <span class="orange">|</span>  
+    <%= link_to 'Eliminar distribuidor', @partner, method: :delete, data: { confirm: '¿Seguro que quieres eliminar este distribuidor?' }, class: "recipe-link" %>
+  </p>
+</div><!-- /.container -->
