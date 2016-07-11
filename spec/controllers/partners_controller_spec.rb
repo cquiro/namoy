@@ -10,44 +10,44 @@ RSpec.describe PartnersController, type: :controller do
   end
 
   describe "GET #show" do
-    # it "assigns the requested partner to @recipe" do
-    #   recipe = create(:natural_recipe)
-    #   get :show, id: recipe
-    #   expect(assigns(:recipe)).to eq recipe
-    # end
+    it "assigns the requested partner to @partner" do
+      partner = create(:partner)
+      get :show, id: partner
+      expect(assigns(:partner)).to eq partner
+    end
 
-    # it "renders the :show template" do
-    #   recipe = create(:natural_recipe)
-    #   get :show, id: recipe
-    #   expect(response).to render_template :show
-    # end
+    it "renders the :show template" do
+      partner = create(:partner)
+      get :show, id: partner
+      expect(response).to render_template :show
+    end
   end
 
-  # describe "GET #new" do
-  #   it "assigns a new Recipe to @recipe" do
-  #     get :new
-  #     expect(assigns(:recipe)).to be_a_new(Recipe)
-  #   end
+  describe "GET #new" do
+    it "assigns a new Partner to @partner" do
+      get :new
+      expect(assigns(:partner)).to be_a_new(Partner)
+    end
 
-  #   it "renders the :new template" do
-  #     get :new
-  #     expect(response).to render_template :new
-  #   end
-  # end
+    it "renders the :new template" do
+      get :new
+      expect(response).to render_template :new
+    end
+  end
 
-  # describe "GET #edit" do
-  #   it "assigns the requested recipe to @recipe" do
-  #     recipe = create(:natural_recipe)
-  #     get :edit, id: recipe
-  #     expect(assigns(:recipe)).to eq recipe
-  #   end
+  describe "GET #edit" do
+    it "assigns the requested partner to @partner" do
+      partner = create(:partner)
+      get :edit, id: partner
+      expect(assigns(:partner)).to eq partner
+    end
 
-  #   it "renders the :edit template" do
-  #     recipe = create(:natural_recipe)
-  #     get :edit, id: recipe
-  #     expect(response).to render_template :edit
-  #   end
-  # end
+    it "renders the :edit template" do
+      partner = create(:partner)
+      get :edit, id: partner
+      expect(response).to render_template :edit
+    end
+  end
 
   # describe "POST #create" do
   #   context "with valid attributes" do
