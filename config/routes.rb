@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :recipes
 
+  resources :partners
+
   root  'static_pages#products'
 
   get   'uses', to: 'recipes#index'
