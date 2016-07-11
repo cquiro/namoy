@@ -1,5 +1,5 @@
 class PartnersController < ApplicationController
-  before_action :set_partner, only: [:show]
+  before_action :set_partner, only: [:show, :edit]
 
   def index
   end
@@ -9,6 +9,9 @@ class PartnersController < ApplicationController
 
   def new
     @partner = Partner.new
+  end
+
+  def edit
   end
 
   private

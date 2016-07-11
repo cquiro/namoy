@@ -37,16 +37,16 @@ RSpec.describe PartnersController, type: :controller do
 
   describe "GET #edit" do
     it "assigns the requested partner to @partner" do
-      recipe = create(:partner)
+      partner = create(:partner)
       get :edit, id: partner
       expect(assigns(:partner)).to eq partner
     end
 
-  #   it "renders the :edit template" do
-  #     recipe = create(:natural_recipe)
-  #     get :edit, id: recipe
-  #     expect(response).to render_template :edit
-  #   end
+    it "renders the :edit template" do
+      partner = create(:partner)
+      get :edit, id: partner
+      expect(response).to render_template :edit
+    end
   end
 
   # describe "POST #create" do
