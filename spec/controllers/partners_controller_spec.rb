@@ -132,21 +132,21 @@ RSpec.describe PartnersController, type: :controller do
     end
   end
 
-  # describe "DELETE #destroy" do
-  #   before :each do
-  #     @recipe = create(:natural_recipe)
-  #   end
+  describe "DELETE #destroy" do
+    before :each do
+      @partner = create(:partner)
+    end
 
-  #   it "deletes the recipe from the database" do
-  #     expect{
-  #       delete :destroy, id: @recipe
-  #     }.to change(Recipe, :count).by(-1)
-  #   end
+    it "deletes the partner from the database" do
+      expect{
+        delete :destroy, id: @partner
+      }.to change(Partner, :count).by(-1)
+    end
 
-  #   it "redirects to recipes#index" do
-  #     delete :destroy, id: @recipe
-  #     expect(response).to redirect_to recipes_url
-  #   end
-  # end
+    it "redirects to partners#index" do
+      delete :destroy, id: @partner
+      expect(response).to redirect_to partners_url
+    end
+  end
 
 end

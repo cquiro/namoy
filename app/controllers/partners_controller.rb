@@ -1,5 +1,5 @@
 class PartnersController < ApplicationController
-  before_action :set_partner, only: [:show, :edit, :update]
+  before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
   def index
   end
@@ -32,6 +32,11 @@ class PartnersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @partner.destroy
+    redirect_to partners_url, notice: 'El distribuidor ha sido eliminado'
   end
 
   private
