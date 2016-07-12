@@ -7,6 +7,15 @@
 
 <div class="container marketing">
 
+  <ul>
+    <li><%= @partner.logo %></li>
+    <li>País: <%= @partner.country %></li>
+    <li>Ciudad: <%= @partner.city %></li>
+    <li>Instagram: <%= @partner.instagram %></li>
+    <li>Facebook: <%= @partner.facebook %></li>
+    <li>Website: <%= @partner.website %></li>
+  </ul>
+
   <p class="page-links">
     <%= link_to 'Ir a distribuidores', partners_path, class: "recipe-link" %> <span class="orange">|</span> 
     <%= link_to 'Editar', edit_partner_path(@partner), class: "recipe-link" %> <span class="orange">|</span>  
