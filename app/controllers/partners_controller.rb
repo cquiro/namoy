@@ -2,6 +2,7 @@ class PartnersController < ApplicationController
   before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
   def index
+    @partners = Partner.all
   end
 
   def show
