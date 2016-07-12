@@ -1,5 +1,5 @@
 class PartnersController < ApplicationController
-  before_action :set_partner, only: [:show, :edit]
+  before_action :set_partner, only: [:show, :edit, :update]
 
   def index
   end
@@ -22,6 +22,15 @@ class PartnersController < ApplicationController
       redirect_to @partner
     else
       render :new
+    end
+  end
+
+  def update
+    if @partner.update(partner_params)
+      flash[:success] = "El distribuidor ha sido actualizado"
+      redirect_to @partner
+    else
+      render :edit
     end
   end
 
