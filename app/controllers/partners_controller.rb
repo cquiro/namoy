@@ -14,6 +14,17 @@ class PartnersController < ApplicationController
   def edit
   end
 
+  def create
+    @partner = Partner.new(partner_params)
+
+    if @partner.save
+      flash[:success] = "Un nuevo distribuidor ha sido creado"
+      redirect_to @partner
+    else
+      render :new
+    end
+  end
+
   private
 
     def set_partner

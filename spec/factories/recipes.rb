@@ -23,7 +23,7 @@ FactoryGirl.define do
 
     factory :invalid_recipe do
       name nil
-      falvor "natural"
+      flavor "natural"
     end
   end
 end

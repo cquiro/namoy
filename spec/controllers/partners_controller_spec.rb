@@ -49,33 +49,33 @@ RSpec.describe PartnersController, type: :controller do
     end
   end
 
-  # describe "POST #create" do
-  #   context "with valid attributes" do
-  #     it "saves the new recipe in the database" do
-  #       expect{
-  #         post :create, recipe: attributes_for(:natural_recipe)
-  #       }.to change(Recipe, :count).by(1)
-  #     end
+  describe "POST #create" do
+    context "with valid attributes" do
+      it "saves the new partner in the database" do
+        expect{
+          post :create, partner: attributes_for(:partner)
+        }.to change(Partner, :count).by(1)
+      end
 
-  #     it "redirects to recipes#show" do
-  #       post :create, recipe: attributes_for(:natural_recipe)
-  #       expect(response).to redirect_to recipe_path(assigns[:recipe])
-  #     end
-  #   end
+      it "redirects to partners#show" do
+        post :create, partner: attributes_for(:partner)
+        expect(response).to redirect_to partner_path(assigns[:partner])
+      end
+    end
 
-  #   context "with invalid attributes" do
-  #     it "does not save the new recipe in the database" do
-  #       expect {
-  #         post :create, recipe: attributes_for(:invalid_recipe)
-  #       }.not_to change(Recipe, :count)
-  #     end
+    context "with invalid attributes" do
+      it "does not save the new partner in the database" do
+        expect {
+          post :create, partner: attributes_for(:invalid_partner)
+        }.not_to change(Partner, :count)
+      end
 
-  #     it "re-renders the :new template" do
-  #       post :create, recipe: attributes_for(:invalid_recipe)
-  #       expect(response).to render_template :new
-  #     end
-  #   end
-  # end
+      it "re-renders the :new template" do
+        post :create, partner: attributes_for(:invalid_partner)
+        expect(response).to render_template :new
+      end
+    end
+  end
 
   # describe "PATCH #update" do
   #   before :each do
