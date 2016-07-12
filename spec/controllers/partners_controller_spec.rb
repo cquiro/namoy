@@ -77,62 +77,60 @@ RSpec.describe PartnersController, type: :controller do
     end
   end
 
-  # describe "PATCH #update" do
-  #   before :each do
-  #     @recipe = create(:natural_recipe, 
-  #       name: "Syrup", 
-  #       flavor: "orange" )
-  #   end
+  describe "PATCH #update" do
+    before :each do
+      @partner = create(:partner, 
+        name: "Groceries", 
+        city: "Bogota" )
+    end
 
-  #   context "with valid attributes" do
-  #     it "locates the requested @recipe" do
-  #       patch :update, id: @recipe,
-  #       recipe: attributes_for(:recipe,
-  #           name: "Cake",
-  #           flavor: "natural")
-  #       expect(assigns(:recipe)).to eq(@recipe)
-  #     end
+    context "with valid attributes" do
+      it "locates the requested @partner" do
+        patch :update, id: @partner,
+        partner: attributes_for(:partner,
+            name: "Foods" )
+        expect(assigns(:partner)).to eq(@partner)
+      end
 
-  #     it "updates the recipe in the database" do
-  #       patch :update, id: @recipe,
-  #         recipe: attributes_for(:recipe,
-  #           name: "Cake",
-  #           flavor: "natural")
-  #         @recipe.reload
-  #         expect(@recipe.name).to eq("Cake")
-  #         expect(@recipe.flavor).to eq("natural")
-  #         expect(@recipe.quantity).to eq("6 things")
-  #     end
+      it "updates the partner in the database" do
+        patch :update, id: @partner,
+          partner: attributes_for(:partner,
+            name: "Foods",
+            city: "Austin" )
+          @partner.reload
+          expect(@partner.name).to eq("Foods")
+          expect(@partner.city).to eq("Austin")
+      end
 
-  #     it "redirects to recipes#show" do
-  #       patch :update, id: @recipe,
-  #         recipe: attributes_for(:recipe,
-  #           name: "Cake",
-  #           flavor: "natural")
-  #       expect(response).to redirect_to @recipe
-  #     end
-  #   end
+      it "redirects to partners#show" do
+        patch :update, id: @partner,
+          partner: attributes_for(:partner,
+            name: "Foods",
+            city: "Austin")
+        expect(response).to redirect_to @partner
+      end
+    end
 
-  #   context "with invalid attributes" do
-  #     it "does not save the new recipe in the database" do
-  #       patch :update, id: @recipe,
-  #         recipe: attributes_for(:recipe,
-  #           name: "Cake",
-  #           flavor: nil)
-  #       @recipe.reload
-  #       expect(@recipe.name).to eq("Syrup")
-  #       expect(@recipe.flavor).to eq("orange")
-  #     end
+    context "with invalid attributes" do
+      it "does not save the new partner in the database" do
+        patch :update, id: @partner,
+          partner: attributes_for(:partner,
+            name: "Foods",
+            city: nil)
+        @partner.reload
+        expect(@partner.name).to eq("Groceries")
+        expect(@partner.city).to eq("Bogota")
+      end
 
-  #     it "re-renders the :edit template" do
-  #       patch :update, id: @recipe,
-  #         recipe: attributes_for(:recipe,
-  #           name: "Cake",
-  #           flavor: nil)
-  #       expect(response).to render_template :edit
-  #     end
-  #   end
-  # end
+      it "re-renders the :edit template" do
+        patch :update, id: @partner,
+          partner: attributes_for(:partner,
+            name: "Foods",
+            city: nil )
+        expect(response).to render_template :edit
+      end
+    end
+  end
 
   # describe "DELETE #destroy" do
   #   before :each do
