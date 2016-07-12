@@ -1,6 +1,6 @@
 <div class="jumbotron secontron" id="locajumbo">
   <div class="container marketing">
-    <h1 class="namoy-font">Encuéntranos</h1>
+    <h1 class="namoy-font">Escríbenos</h1>
   </div>
 </div><!-- /.container -->
 
@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h2 class="center"> 
-        <span class="glyphicon glyphicon-map-marker orange smaller-text" aria-hidden="true"></span> Encuentra nuestros productos cerca de ti o escríbenos. <span class="glyphicon glyphicon-map-marker orange smaller-text" aria-hidden="true"></span>
+        Comparte con nosotros tus dudas, sugerencias y experiencias.
       </h2>
     </div><!-- /.col-lg-12 -->
   </div><!-- /.row -->
@@ -19,18 +19,10 @@
 
 <!-- Content
 ================================================== -->
-  <div class="row featurette">
-    <div class="col-md-7 col-md-push-5">
-      <div class="content-wrapper" id="about-wrapper"> 
-        <p class="lead">
-          Encuentra nuestros productos en los siguientes lugares:
-        </p>
-      </div><!-- /.content-wrapper -->
-    </div><!-- /.col-md-7 -->
-      
-    <div class="col-md-5 col-md-pull-7">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
       <div class="form-container">
-      <%= form_for @message, url: locations_path do |f| %>
+      <%= form_for @message, url: contact_path do |f| %>
         <% if @message.errors.any? %>
           <div id="error_explanation">
             <h2>
@@ -47,9 +39,7 @@
 
         <p class="notice"><%= flash[:notice] %></p>
 
-        <h1 class="contitle">
-          <i class="fa fa-paper-plane orange"></i> Escríbenos
-        </h1>
+        <h1 class="contitle center"><i class="fa fa-envelope-o fa-2x orange"></i></h1>
 
         <hr class="orange">
 
@@ -78,6 +68,8 @@
         </div>
       <% end %>
       </div><!-- /.form-conteiner -->
-    </div><!-- /.col-md-5 -->
+    </div><!-- /.col-md-4 -->
+    <div class="col-md-4"></div>
   </div><!-- /.row -->
+  <p class="page-links"><%= link_to 'Ir a "Encuéntranos"', partners_path, class: "recipe-link" %></p>
 </div><!-- /.container -->

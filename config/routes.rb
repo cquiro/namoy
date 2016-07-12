@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   get   'about', to: 'static_pages#about'
 
-  get   'locations',  to:  'messages#new', as: 'locations'
+  get   'locations',  to:  'partners#index', as: 'locations'
 
-  post  'locations', to: 'messages#create'
+  get   'contact', to: 'messages#new', as: 'contact'
+
+  post  'contact', to: 'messages#create'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
