@@ -4,7 +4,7 @@ FactoryGirl.define do
     quantity "6 things"
     ingredients "Panela Namoy and something else"
     instructions "Mix, cool and serve."
-    image { Rack::Test::UploadedFile.new(File.join(Rails.root, '/spec/support/recipe_files/logo_blanco_letras.png')) }
+    image { Rack::Test::UploadedFile.new(File.join(Rails.root, '/spec/support/ex_upload_file/logo_blanco_letras.png')) }
 
     factory :natural_recipe do
       sequence(:name) { |n| "Natural#{n}" }
