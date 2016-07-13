@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  context "validations" do
+  describe "validations" do
     it "is valid with name, email and password_digest" do
       user = build(:user)
       expect(user).to be_valid
@@ -22,9 +22,8 @@ RSpec.describe User, type: :model do
 
   describe "#downcase_email" do
     it "makes the email attribute lower case" do
-      user = create(:user, email: "PEPE@GRILLO.COM")
-      user.downcase_email
-      expect(user.email).to eq("pepe@grillo.com")
+      user = build(:user, email: "PEPE@GRILLO.COM")
+      expect { user.downcase_email }.to change{ user.email }.from("PEPE@GRILLO.COM").to("pepe@grillo.com")
     end
 
     it "downcases an email before saving" do
