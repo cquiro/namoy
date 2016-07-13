@@ -72,7 +72,17 @@ RSpec.describe UserSessionsController, type: :controller do
       end
 
       let(:email) { @user.email }
-      let(:password) { "hello" }
+      let(:password) { "incorrect" }
+      it_behaves_like "denied login"
+    end
+
+    context "with no email in existence" do
+      before :each do
+        @user = create(:user)
+      end
+
+      let(:email) { "none@found.com" }
+      let(:password) { "incorrect" }
       it_behaves_like "denied login"
     end
   end
