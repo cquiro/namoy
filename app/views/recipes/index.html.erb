@@ -98,6 +98,7 @@
       </div><!-- /.col-sm-6 -->
     <% end %>   
   </div><!-- /.row -->
-
-  <p class="page-links"><%= link_to 'Agregar receta', new_recipe_path, class: "new-recipe-link" %></p>
+  <% if @current_user %>
+    <p class="page-links"><%= link_to 'Agregar receta', new_recipe_path, class: "new-recipe-link" %></p>
+  <% end %>
 </div><!-- /.container -->

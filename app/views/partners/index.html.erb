@@ -64,7 +64,9 @@
     <% end %>   
   </div><!-- /.row -->
 
-  <p class="page-links"><%= link_to 'Agregar distribuidor', new_partner_path, class: "new-recipe-link" %></p>
+  <% if @current_user %>
+    <p class="page-links"><%= link_to 'Agregar distribuidor', new_partner_path, class: "new-recipe-link" %></p>
+  <% end %>
 
   <div class="row">
     <div class="col-lg-12 with-border" id="contact-box">
