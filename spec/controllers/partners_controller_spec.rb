@@ -10,16 +10,32 @@ RSpec.describe PartnersController, type: :controller do
   end
 
   describe "GET #show" do
-    it "assigns the requested partner to @partner" do
-      partner = create(:partner)
-      get :show, id: partner
-      expect(assigns(:partner)).to eq partner
+    context "logged out" do
+      it "requires login" do
+        partner = create(:partner)
+        get :show, id: partner
+        expect(response).to be_redirect
+        expect(response).to redirect_to(namoy_manejo_contenido_path)
+      end
     end
 
-    it "renders the :show template" do
-      partner = create(:partner)
-      get :show, id: partner
-      expect(response).to render_template :show
+
+    context "logged in" do
+      before do
+        expect(controller).to receive(:require_user).and_return(true)
+      end
+
+      it "assigns the requested partner to @partner" do
+        partner = create(:partner)
+        get :show, id: partner
+        expect(assigns(:partner)).to eq partner
+      end
+
+      it "renders the :show template" do
+        partner = create(:partner)
+        get :show, id: partner
+        expect(response).to render_template :show
+      end
     end
   end
 
