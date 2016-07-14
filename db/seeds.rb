@@ -32,9 +32,9 @@ recipe2 = Recipe.create(
             flavor:       "natural",
             ingredients:  "1/2 taza de café expreso recién hecho
 2 tazas y media de leche baja en grasas\n2 cucharadas de NA-MOY PANELA EN POLVO
-6 cubos de hielo\nCrema chantilly para decoración\nSalsa de chocolate para decoración",
+6 cubos de hielo\nCrema chantilly para decoración",
             instructions: "Vierte todos los ingredientes en la licuadora hasta que quede como una crema congelada espesa.
-Sirve y decora con crema Chantilly, NA-MOY PANELA EN POLVO  y salsa de chocolate.",
+Sirve y decora con crema Chantilly y espolvorea NA-MOY PANELA EN POLVO para decorar.",
             image:        "Imagen")
 
 recipe3 = Recipe.create(
