@@ -1,16 +1,8 @@
-$namoy-brown: #A6632D;//#7B4014;
+$namoy-brown: #A6632D;
 $namoy-yellow: #E7AC10;
 $namoy-orange: #FFA901;
 $namoy-green: #ADDC00;
 $namoy-white: #FFFFFF;
-
-
-/* CUSTOM FONTS
--------------------------------------------------- */
-@font-face {
-  font-family: "Besom";
-  src: url(/assets/Besom-free-font.ttf) format("truetype");
-}
 
 
 /* GLOBAL STYLES
@@ -21,26 +13,21 @@ body {
   padding-bottom: 40px;
   color: $namoy-brown;//#5a5a5a;
 }
-
 .namoy-font {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 .green,
 .limon-color {
   color: $namoy-green;
 }
-
 .orange,
 .naranja-color {
   color: $namoy-orange;
   border-color: orange;
 }
-
 .smaller-text {
   font-size: 0.7em;
 }
-
 .notice {
   margin-top: 15px;
   color: $namoy-green;
@@ -50,7 +37,6 @@ body {
 .just {
   text-align: justify;
 }
-
 a,
 a:focus {
   color: $namoy-brown;
@@ -153,7 +139,6 @@ nav.navbar.navbar-fixed-top {
 -------------------------------------------------- */
 .jumbomain {
   background-image: image-url("banner_principal.jpeg");
-  //https://unsplash.it/1450/520?image=307)
 }
 
 .jumbotron {
@@ -294,7 +279,6 @@ footer {
 -------------------------------------------------- */
 .secontron {
   background-image: url("banner_general.jpeg");
-  //https://unsplash.it/1450/277?image=490
   color: $namoy-white;
   padding-top: 105px;
   margin-bottom: 0px;
