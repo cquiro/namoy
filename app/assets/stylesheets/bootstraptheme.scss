@@ -152,7 +152,8 @@ nav.navbar.navbar-fixed-top {
 /* CUSTOMIZE THE JUMBOTRON
 -------------------------------------------------- */
 .jumbomain {
-  background-image: url(https://unsplash.it/1450/520?image=307);
+  background-image: image-url("banner_principal.jpeg");
+  //https://unsplash.it/1450/520?image=307)
 }
 
 .jumbotron {
@@ -232,6 +233,12 @@ nav.navbar.navbar-fixed-top {
   margin-top: 30px;
 }
 
+.panela-img {
+  border: 1px solid $namoy-orange;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
 
 
 /* DIVIDER
@@ -286,7 +293,8 @@ footer {
   /* SECONDARY PAGES
 -------------------------------------------------- */
 .secontron {
-  background-image: url(https://unsplash.it/1450/277?image=490);
+  background-image: url("banner_general.jpeg");
+  //https://unsplash.it/1450/277?image=490
   color: $namoy-white;
   padding-top: 105px;
   margin-bottom: 0px;
@@ -294,6 +302,18 @@ footer {
     margin-top: 45px;
     text-align: center;
   }
+}
+
+#back-usos {
+  background-image: image-url("banner_encuentranos.jpeg");
+}
+
+#back-encuentranos {
+  background-image: image-url("banner_encuentranos.jpeg");
+}
+
+#back-nosotros {
+  background-image: image-url("banner_encuentranos.jpeg");  
 }
 
 ul.ideas {

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'user_sessions/new'
-
-  get 'user_sessions/create'
-
   resources :recipes
 
   resources :partners
@@ -19,6 +15,10 @@ Rails.application.routes.draw do
   get   'contact', to: 'messages#new', as: 'contact'
 
   post  'contact', to: 'messages#create'
+
+  get   'namoy_manejo_contenido', to: 'user_sessions#new'
+
+  post  'namoy_manejo_contenido', to: 'user_sessions#create'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
