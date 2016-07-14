@@ -83,8 +83,9 @@
     <% @recipes.each do |recipe| %>
       <div class="col-sm-6 col-md-4 <%= recipe.flavor %>">
         <div class="thumbnail recithumb">
-          <%= image_tag "muffins_chocolate.jpeg", alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %> 
+          <%= image_tag recipe.image, alt: "Chocolate Muffins", class: "featurette-image img-responsive center-block" %> 
           <!-- https://unsplash.it/800/500?image=312 -->
+          <!-- "muffins_chocolate.jpeg" -->
           <div class="caption">
             <h3 class="thumbnail-name">
               <i class="fa fa-lemon-o <%= recipe.flavor %>-color" aria-hidden="true"></i> 
