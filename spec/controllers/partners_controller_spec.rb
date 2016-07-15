@@ -40,28 +40,58 @@ RSpec.describe PartnersController, type: :controller do
   end
 
   describe "GET #new" do
-    it "assigns a new Partner to @partner" do
-      get :new
-      expect(assigns(:partner)).to be_a_new(Partner)
+    context "logged out" do
+      it "requires login" do
+        get :new
+        expect(response).to be_redirect
+        expect(response).to redirect_to(namoy_manejo_contenido_path)
+      end
     end
 
-    it "renders the :new template" do
-      get :new
-      expect(response).to render_template :new
+    context "logged in" do
+      before do
+        sign_in(build_stubbed(:user))
+      end
+
+      it "assigns a new Partner to @partner" do
+        get :new
+        expect(assigns(:partner)).to be_a_new(Partner)
+      end
+
+      it "renders the :new template" do
+        get :new
+        expect(response).to render_template :new
+      end
     end
   end
 
   describe "GET #edit" do
-    it "assigns the requested partner to @partner" do
-      partner = create(:partner)
-      get :edit, id: partner
-      expect(assigns(:partner)).to eq partner
+    before do
+      @partner = create(:partner)
     end
 
-    it "renders the :edit template" do
-      partner = create(:partner)
-      get :edit, id: partner
-      expect(response).to render_template :edit
+    context "logged out" do
+      it "requires login" do
+        get :edit, id: @partner
+        expect(response).to be_redirect
+        expect(response).to redirect_to(namoy_manejo_contenido_path)
+      end
+    end
+
+    context "logged in" do
+      before do
+        sign_in(build_stubbed(:user))
+      end
+
+      it "assigns the requested partner to @partner" do
+        get :edit, id: @partner
+        expect(assigns(:partner)).to eq @partner
+      end
+
+      it "renders the :edit template" do
+        get :edit, id: @partner
+        expect(response).to render_template :edit
+      end
     end
   end
 

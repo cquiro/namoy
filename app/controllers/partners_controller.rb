@@ -1,5 +1,5 @@
 class PartnersController < ApplicationController
-  before_action :require_user, only: [:show]
+  before_action :require_user, only: [:show, :new, :edit]
   before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
   def index
