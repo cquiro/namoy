@@ -19,10 +19,10 @@ RSpec.describe PartnersController, type: :controller do
       end
     end
 
-
     context "logged in" do
       before do
-        expect(controller).to receive(:require_user).and_return(true)
+        sign_in(build_stubbed(:user))
+        # expect(controller).to receive(:current_user).and_return(build_stubbed(:user))
       end
 
       it "assigns the requested partner to @partner" do
