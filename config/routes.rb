@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :partners
 
+  resources :password_resets, only: [:new, :create]
+
   root  'static_pages#products'
 
   get   'uses', to: 'recipes#index'
@@ -19,6 +21,8 @@ Rails.application.routes.draw do
   get   'namoy_manejo_contenido', to: 'user_sessions#new'
 
   post  'namoy_manejo_contenido', to: 'user_sessions#create'
+
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,38 @@
+<div class="jumbotron secontron">
+  <div class="container marketing">
+    <h1 class="namoy-font">Restablecer mi contraseña</h1>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing">
+    <!-- Form
+  ================================================== -->
+  <div class="row featurette create-form">
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+    <div class="col-md-8">
+      <div class="form-container">
+      <%= form_tag password_resets_path do %>
+        <p>
+        <% flash.each do |type, message| %>
+          <div class="alert flash <%= type %>">
+            <%= message %>
+          </div>
+        <% end %>
+        </p>
+        
+        <div class="form-group">
+          <%= label_tag :email, "Email", class: "lead" %>
+          <%= text_field_tag :email %>
+        </div>
+  
+        <div class="form-group">
+          <%= submit_tag "Enviar", class: "btn btn-lg btn-primary", role: "button" %>
+        </div>
+      <% end %>
+      </div><!-- /.form-container -->
+    </div><!-- /.col-md-5 -->
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+  </div><!-- /.row -->
+
+
+</div><!-- /.container -->
