@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :partners
 
-  resources :password_resets, only: [:new, :create]
+  resources :password_resets, only: [:new, :create, :edit]
 
   root  'static_pages#products'
 

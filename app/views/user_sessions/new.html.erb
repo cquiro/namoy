@@ -5,5 +5,42 @@
 </div><!-- /.container -->
 
 <div class="container marketing">
-  <%= render 'form' %>
+  <!-- Form
+================================================== -->
+<div class="row featurette create-form">
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+  <div class="col-md-8">
+    <div class="form-container">
+    <%= form_tag namoy_manejo_contenido_path do %>
+        <p>
+        <% flash.each do |type, message| %>
+          <div class="alert flash <%= type %>">
+            <%= message %>
+          </div>
+        <% end %>
+        </p>
+      
+
+      <div class="form-group">
+        <%= label_tag :email, "Email", class: "lead" %>
+        <%= text_field_tag :email, params[:email] %>
+      </div>
+      <!-- , class: "form-control" -->
+      <!-- , class: "form-control" -->
+      <div class="form-group">
+        <%= label_tag :password, "Contraseña", class: "lead" %>
+        <%= password_field_tag :password %>
+      </div>
+
+      <div class="form-group">
+        <%= submit_tag 'Iniciar Sesión', class: "btn btn-lg btn-primary", role: "button" %>   
+        <%= link_to "Olvidé mi contraseña", new_password_reset_path, class: "lead", id: "forgot-link" %>
+      </div>
+    <% end %>
+    </div><!-- /.form-container -->
+  </div><!-- /.col-md-5 -->
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+</div><!-- /.row -->
+
+
 </div><!-- /.container -->
