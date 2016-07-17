@@ -7,8 +7,9 @@ class PasswordResetsController < ApplicationController
     if user
       user.generate_password_reset_token!
       MessageMailer.password_reset(user).deliver_now
-      redirect_to namoy_manejo_contenido_path
-      flash[:success] = "Te hemos enviado un email para restablecer tu contraseña."
+      # redirect_to namoy_manejo_contenido_path
+      render :new
+      flash.now[:success] = "Te hemos enviado un email para restablecer tu contraseña."
     else
       flash[:error] = "No tenemos un usuario con ese email."
       render :new
