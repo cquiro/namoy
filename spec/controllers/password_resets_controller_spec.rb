@@ -24,6 +24,23 @@ RSpec.describe PasswordResetsController, type: :controller do
       it "sends a password reset email" do
         expect{ post :create, email: user.email }.to change(ActionMailer::Base.deliveries, :size)
       end
+
+      it "sets the flash[:success] message" do
+        post :create, email: user.email
+        expect(flash[:success]).to include("Te hemos enviado un email para restablecer tu contraseña.")
+      end
+    end
+
+    context "with  no user found" do
+      it "renders the new page" do
+        post :create, email: 'none@found.com'
+        expect(response).to render_template('new')
+      end
+
+      it "sets the flash[:error] message" do
+        post :create, email: 'none@found.com'
+        expect(flash[:error]).to include("No tenemos un usuario con ese email.")
+      end
     end
   end
 end
