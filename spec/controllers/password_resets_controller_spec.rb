@@ -43,4 +43,15 @@ RSpec.describe PasswordResetsController, type: :controller do
       end
     end
   end
+
+  describe "GET edit" do
+    context "with a valid email" do
+      let(:user) { create(:user) }
+      before { user.generate_password_reset_token! }
+
+      it "renders the edit template" do
+        
+      end
+    end
+  end
 end
