@@ -1,0 +1,43 @@
+<div class="jumbotron secontron">
+  <div class="container marketing">
+    <h1 class="namoy-font">Elige tu nueva contraseña</h1>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing">
+    <!-- Form
+  ================================================== -->
+  <div class="row featurette create-form">
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+    <div class="col-md-8">
+      <div class="form-container">
+      <%= form_for @user, url: password_reset_path(@user.password_reset_token), html: { method: :patch } do |f| %>
+        <p>
+        <% flash.each do |type, message| %>
+          <div class="alert flash <%= type %>">
+            <%= message %>
+          </div>
+        <% end %>
+        </p>
+        
+        <div class="form-group">
+          <%= f.label :password, "Nueva Contraseña", class: "lead" %>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, "Nueva Contraseña (otra vez)", class: "lead" %>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
+    
+        <div class="form-group">
+          <%= submit_tag "Cambiar mi contraseña", class: "btn btn-lg btn-primary", role: "button" %>
+        </div>
+      <% end %>
+      </div><!-- /.form-container -->
+    </div><!-- /.col-md-5 -->
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+  </div><!-- /.row -->
+
+
+</div><!-- /.container -->
