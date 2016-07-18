@@ -58,5 +58,5 @@ Cuando esté listo deja reposar unos minutos, corta en rodajas y cubre con un po
             ])
 
 user = User.create!(name: 'Namoy',
-                   email: 'info@namoy.com',
+                   email: 'info@namoy.co',
                    password_digest: "#{User.digest('clave_temporal')}" )
