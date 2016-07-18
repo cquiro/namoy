@@ -57,4 +57,6 @@ Cuando esté listo deja reposar unos minutos, corta en rodajas y cubre con un po
             image:        File.open(File.join(Rails.root, 'app/assets/images/vinagreta_limon.jpg')) }
             ])
 
-user = User.create(name: "Namoy Admin", email: "info@namoy.com", password: "temporal", password_digest: "temporal")
+user = User.create!(name: 'Namoy',
+                   email: 'info@namoy.com',
+                   password_digest: "#{User.digest('clave_temporal')}" )
