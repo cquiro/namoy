@@ -51,7 +51,7 @@
                               :target => "_blank" %>
                 </li>
               </ul><!-- /.social-links -->
-              <% if @current_user %>
+              <% if logged_in? %>
                 <p class="enlaces"><%= link_to 'Ver distribuidor', partner %></p>
               <% end %>
             </div><!-- /.caption -->
@@ -67,7 +67,7 @@
     <% end %>   
   </div><!-- /.row -->
 
-  <% if @current_user %>
+  <% if logged_in? %>
     <p class="page-links"><%= link_to 'Agregar distribuidor', new_partner_path, class: "new-recipe-link" %></p>
   <% end %>
 

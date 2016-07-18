@@ -100,7 +100,7 @@
     <% end %>   
 
   </div><!-- /.row -->
-  <% if @current_user %>
+  <% if logged_in? %>
     <p class="page-links"><%= link_to 'Agregar receta', new_recipe_path, class: "new-recipe-link" %></p>
   <% end %>
 </div><!-- /.container -->

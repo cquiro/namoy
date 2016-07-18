@@ -37,7 +37,7 @@
 
   <p class="page-links">
     <%= link_to 'Ir a "Usos"', recipes_path, class: "recipe-link" %>
-    <% if @current_user %>
+    <% if logged_in? %>
       <span class="orange"> |</span> 
       <%= link_to 'Editar', edit_recipe_path(@recipe), class: "recipe-link" %><span class="orange"> |</span>  
       <%= link_to 'Eliminar receta', @recipe, method: :delete, data: { confirm: '¿Seguro que quieres eliminar esta receta?' }, class: "recipe-link" %>
