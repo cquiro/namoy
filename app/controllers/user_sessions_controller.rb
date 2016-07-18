@@ -13,4 +13,10 @@ class UserSessionsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    reset_session
+    redirect_to namoy_manejo_contenido_path, notice: "Tu sesión ha terminado"
+  end
 end

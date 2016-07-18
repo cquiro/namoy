@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   post  'namoy_manejo_contenido', to: 'user_sessions#create'
 
+  delete '/logout', to: 'user_sessions#destroy'
 
   
 
