@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  default_url_options[:host] = "localhost:3000"
+  default_url_options[:host] = "http://namoy-env.fbtkmyrbm2.us-west-2.elasticbeanstalk.com/"
   default to: "info@namoy.co"
 
   def message_me(msg)
