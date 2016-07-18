@@ -16,7 +16,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
-              <li><%= link_to "Terminar Sesión", terminar_sesion_path, method: :delete, class: "small-link" %></li>
+              <li class="small-link"><%= link_to "Terminar Sesión", terminar_sesion_path, method: :delete %></li>
             <% end %>
             <li><%= link_to "Productos", root_path %></li>
             <li><%= link_to "Usos", uses_path %></li>
