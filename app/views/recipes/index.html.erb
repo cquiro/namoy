@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h2 class="center"> 
-        NA-MOY PANELA EN POLVO es amigable contigo y tu cocina
+        NA-MOY panela en polvo es amigable contigo y tu cocina
       </h2>
     </div><!-- /.col-lg-12 -->
   </div><!-- /.row -->
@@ -81,7 +81,7 @@
   <div class="row">  
     <p id="notice"><%= notice %></p>
     <% @recipes.each do |recipe| %>
-      <div class="col-sm-6 col-md-4 <%= recipe.flavor %>">
+      <div class="col-sm-6 col-md-3 <%= recipe.flavor %>">
         <div class="thumbnail recithumb">
           <%= image_tag recipe.image, alt: recipe.name, class: "featurette-image img-responsive center-block" %> 
           <!-- https://unsplash.it/800/500?image=312 -->
@@ -91,7 +91,7 @@
               <i class="fa fa-lemon-o <%= recipe.flavor %>-color" aria-hidden="true"></i> 
               <%= recipe.name %>
             </h3>
-            <p class="lead">Tiempo de preparación: <%= recipe.time_ready %></p>
+            <p class="lead">Tiempo: <%= recipe.time_ready %></p>
             <p class="lead">Cantidad: <%= recipe.quantity %></p>
             <p class="recipar"><%= link_to "Ver receta", recipe, class: "btn btn-primary", role: "button" %></p>
           </div><!-- /.caption -->

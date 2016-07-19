@@ -26,7 +26,7 @@
     <p id="notice"><%= notice %></p>
     <% if @partners.size > 0 %>
       <% @partners.each do |partner| %>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
             <%= image_tag partner.logo, alt: partner.name, class: "featurette-image img-responsive center-block" %> 
             <!-- https://unsplash.it/800/500?image=312 -->
