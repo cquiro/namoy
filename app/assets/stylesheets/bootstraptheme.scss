@@ -144,6 +144,47 @@ nav.navbar.navbar-fixed-top {
 }
 
 
+
+/* SLIDER
+-------------------------------------------------- */
+
+.panela-img {
+  //border: 1px solid $namoy-orange;
+  //border-radius: 10px;
+  max-width: 600px;
+  background-color: white;
+  //margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.panela-img div {
+  background-color: transparent;
+  width: 100%;
+  display: inline-block;
+  display: none;
+}
+.panela-img img {
+  width: 100%;
+  height: auto;
+}
+#next {
+  margin-top: 200px;
+  position: absolute;
+  right: 72px;
+  font-size: 1.8em;
+}
+#prev {
+  position: absolute;
+  left: 72px;
+  font-size: 1.8em;
+  margin-top: 200px;
+}
+
+
+
+
+
+
 /* CUSTOMIZE THE JUMBOTRON
 -------------------------------------------------- */
 .jumbomain {
@@ -225,12 +266,6 @@ nav.navbar.navbar-fixed-top {
 
 .spaced {
   margin-top: 30px;
-}
-
-.panela-img {
-  border: 1px solid $namoy-orange;
-  border-radius: 10px;
-  max-width: 600px;
 }
 
 

@@ -33,10 +33,7 @@
 
   <div class="row featurette">
     <div class="col-md-5 col-md-push-7">
-      <div class="content-wrapper"> 
-        <!--<p>
-          <%#= image_tag("titulo_namoy.png", :alt => "Namoy panela en polvo", class: "img-responsive", id: "titulo-nam") %>
-        </p>-->     
+      <div class="content-wrapper">    
         <p class="lead just">
           NA-MOY panela en polvo es un <span class="orange">endulzante de origen vegetal libre de gluten</span>, creado especialmente para quienes buscan y practican un estilo de vida saludable y libre de alimentos procesados. Su proceso <span class="orange">100% natural</span> lo convierte en la alternativa adecuada para sustituir el uso de azúcar refinado, pues es un edulcorante <span class="orange">rico en vitaminas</span> A, B, C, D, E <span class="orange">y minerales</span> como el fósforo, potasio, hierro, calcio, magnesio, manganeso, zinc y cobre.
         </p>
@@ -45,9 +42,21 @@
     </div><!-- /.col-md-4 -->
       
     <div class="col-md-7 col-md-pull-5 panela-img">
-      <%= image_tag "panela_limon.jpg", alt: "Panela Namoy Product Image", class: "featurette-image img-responsive center-block" %>
+      <a><span class="glyphicon glyphicon-menu-right"  id="next" aria-hidden="true"></span></a>
+      <a><span class="glyphicon glyphicon-menu-left" id="prev" aria-hidden="true"></span></a>
+
+      <div style="display: inline-block;">
+        <%= image_tag "panela_limon.jpg", alt: "Panela Namoy Limon", class: "featurette-image img-responsive center-block" %>
+      </div>
+      <div>
+        <%= image_tag "panela_natural.jpg", alt: "Panela Namoy Natural", class: "featurette-image img-responsive center-block" %>
+      </div>
+      <div>
+        <%= image_tag "panela_naranja.jpg", alt: "Panela Namoy Naranja", class: "featurette-image img-responsive center-block" %>
+      </div>
     </div><!-- /.col-md-8 -->
   </div><!-- /.row -->
+
 
   <hr class="featurette-divider">
 
