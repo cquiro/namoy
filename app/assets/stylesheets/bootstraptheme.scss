@@ -165,12 +165,14 @@ nav.navbar.navbar-fixed-top {
   height: auto;
 }
 #next {
+  cursor: pointer;
   margin-top: 200px;
   position: absolute;
   right: 72px;
   font-size: 1.8em;
 }
 #prev {
+  cursor: pointer;
   position: absolute;
   left: 72px;
   font-size: 1.8em;
