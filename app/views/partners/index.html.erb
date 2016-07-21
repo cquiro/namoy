@@ -45,11 +45,13 @@
                               partner.facebook, 
                               :target => "_blank" %>
                 </li>
-                <li>
-                  <%= link_to '<i class="fa fa-globe fa-2x"></i>'.html_safe, 
-                              partner.website, 
-                              :target => "_blank" %>
-                </li>
+                <% unless partner.website.blank? %>
+                  <li>
+                    <%= link_to '<i class="fa fa-globe fa-2x"></i>'.html_safe, 
+                                partner.website, 
+                                :target => "_blank" %>
+                  </li>
+                <% end %>
               </ul><!-- /.social-links -->
               <% if logged_in? %>
                 <p class="enlaces"><%= link_to 'Ver distribuidor', partner %></p>
