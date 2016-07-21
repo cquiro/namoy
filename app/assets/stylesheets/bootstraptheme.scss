@@ -145,7 +145,7 @@ nav.navbar.navbar-fixed-top {
 
 
 
-/* SLIDER
+/* SLIDER ON HOME PAGE
 -------------------------------------------------- */
 
 .panela-img {
@@ -178,9 +178,6 @@ nav.navbar.navbar-fixed-top {
   font-size: 1.8em;
   margin-top: 200px;
 }
-
-
-
 
 
 
@@ -518,12 +515,10 @@ ul.ideas {
     .caption {
       width:100%;
       height: auto;
-      p.recipar {
-        a {
-          position: absolute;
-          left: 29px;
-          bottom: 34px;
-        }
+      div.recipar {
+        position: absolute;
+        left: 29px;
+        bottom: 34px;
       }
     }  
   }
@@ -585,9 +580,6 @@ ul.ideas {
   }
 
   /* Add some space to the top of the infographic */
-  .infog {
-    margin-top: 42px;
-  }
 
   .featurette-heading {
     font-size: 50px;

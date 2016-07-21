@@ -91,9 +91,12 @@
               <i class="fa fa-lemon-o <%= recipe.flavor %>-color" aria-hidden="true"></i> 
               <%= recipe.name %>
             </h3>
+            <div class="recipar">
             <p class="lead">Tiempo: <%= recipe.time_ready %></p>
             <p class="lead">Cantidad: <%= recipe.quantity %></p>
-            <p class="recipar"><%= link_to "Ver receta", recipe, class: "btn btn-primary", role: "button" %></p>
+            <br/>
+            <p><%= link_to "Ver receta", recipe, class: "btn btn-primary", role: "button" %></p>
+            </div>
           </div><!-- /.caption -->
         </div><!-- /.thumbnail -->
       </div><!-- /.col-sm-6 -->
