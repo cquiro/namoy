@@ -7,13 +7,14 @@
 
 <div class="container marketing">
 
-  <ul>
-    <li><%= @partner.logo %></li>
-    <li>País: <%= @partner.country %></li>
-    <li>Ciudad: <%= @partner.city %></li>
-    <li>Instagram: <%= @partner.instagram %></li>
-    <li>Facebook: <%= @partner.facebook %></li>
-    <li>Website: <%= @partner.website %></li>
+  <ul class="ideas partner-show lead">
+    <li><%= image_tag @partner.logo, alt: @partner.name + " logo" , class: "featurette-image img-responsive" %></li>
+    <li><strong>Imagen actual:</strong> <%= @partner.logo %></li>
+    <li><strong>País:</strong> <%= @partner.country %></li>
+    <li><strong>Ciudad:</strong> <%= @partner.city %></li>
+    <li><strong>Instagram:</strong> <%= @partner.instagram %></li>
+    <li><strong>Facebook:</strong> <%= @partner.facebook %></li>
+    <li><strong>Website:</strong> <%= @partner.website %></li>
   </ul>
 
   <p class="page-links">
