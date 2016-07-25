@@ -59,8 +59,12 @@ a:focus {
 -------------------------------------------------- */
 .white {
   color: white;
-  a {
+  a, a:focus {
     color: #3b5998;
+    text-decoration:none;
+    &:hover {
+      color: $namoy-orange;
+    }
   }
 }
 
