@@ -28,17 +28,17 @@
 
       <div class="form-group">
         <%= f.label :name, "Nombre", class: "lead" %>
-        <%= f.text_field :name, class: "form-control" %>
+        <%= f.text_field :name, maxlength: 40, class: "form-control" %>
       </div>
 
       <div class="form-group">
         <%= f.label :time_ready, "Tiempo de preparación", class: "lead" %>
-        <%= f.text_field :time_ready, class: "form-control" %>
+        <%= f.text_field :time_ready, maxlength: 15, class: "form-control" %>
       </div>
 
       <div class="form-group">
         <%= f.label :quantity, "Cantidad", class: "lead" %>
-        <%= f.text_field :quantity, class: "form-control" %>
+        <%= f.text_field :quantity, maxlength: 12, class: "form-control" %>
       </div>
 
       <div class="form-group">

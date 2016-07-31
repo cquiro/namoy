@@ -55,6 +55,7 @@ a:focus {
 }
 
 
+
 /* FACEBOOK SHARE
 -------------------------------------------------- */
 .white {
@@ -266,7 +267,7 @@ nav.navbar.navbar-fixed-top {
   background-color: $namoy-green;
   color: $namoy-white;
   padding: 10px 40px;
-  font-size: 1em;
+  font-size: 1.2em;
   &:hover{
     border-color: $namoy-orange;
     background-color: $namoy-orange;
@@ -555,9 +556,6 @@ ul.ideas {
 }
 
 @media (min-width: 930px) {
-  body {
-    font-size: 21px;
-  }
 
   #titulo-nam {
     margin: 0px auto 24px;

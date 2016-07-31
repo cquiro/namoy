@@ -92,8 +92,12 @@
               <%= recipe.name %>
             </h3>
             <div class="recipar">
-            <p class="lead">Tiempo: <%= recipe.time_ready %></p>
-            <p class="lead">Cantidad: <%= recipe.quantity %></p>
+            <p class="lead">
+              <span class="glyphicon glyphicon-hourglass <%= recipe.flavor %>-color" aria-hidden="true"></span>
+              &nbsp;&nbsp;<%= recipe.time_ready %></p>
+            <p class="lead">
+              <span class="glyphicon glyphicon-cutlery <%= recipe.flavor %>-color" aria-hidden="true"></span>
+              &nbsp;&nbsp;<%= recipe.quantity %></p>
             <br/>
             <p><%= link_to "Ver receta", recipe, class: "btn btn-primary", role: "button" %></p>
             </div>
