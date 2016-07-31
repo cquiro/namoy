@@ -39,6 +39,7 @@ body {
 }
 a,
 a:focus {
+  font-size: 1em;
   color: $namoy-brown;
   &:hover {
    color: $namoy-orange;
@@ -78,7 +79,6 @@ a:focus {
 -------------------------------------------------- */
 nav.navbar.navbar-fixed-top {
   padding-top: 9;
-  //background: rgba(65, 39, 18, 0.8);
 }
 
 #navbar {
@@ -108,7 +108,7 @@ nav.navbar.navbar-fixed-top {
 
 .navbar-wrapper {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
   position: absolute;
   top: 0;
   right: 0;
@@ -267,7 +267,7 @@ nav.navbar.navbar-fixed-top {
   background-color: $namoy-green;
   color: $namoy-white;
   padding: 10px 40px;
-  font-size: 1.2em;
+  font-size: 1em;
   &:hover{
     border-color: $namoy-orange;
     background-color: $namoy-orange;
@@ -395,7 +395,7 @@ ul.ideas {
 }
 
 .new-recipe-link {
-  font-size: 1.3em;
+  font-size: 1em;
   text-align: center;
   color: $namoy-brown;
   &:active,
@@ -423,6 +423,7 @@ ul.ideas {
   text-align: center;
   margin-top: 45px;
   .recipe-link {
+    font-size: 1em;
     color: $namoy-brown;
     &:active,
     &:focus,
@@ -533,6 +534,10 @@ ul.ideas {
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+  body {
+    font-size: 21px;
+  }
+  
   h1.smaller-title {
     font-size: 2.1em;
   }
@@ -541,7 +546,7 @@ ul.ideas {
   .thumbnail {
     width:100%;
     &.recithumb {
-      height:500px;
+      height:522px;
     }
     .caption {
       width:100%;
@@ -568,10 +573,6 @@ ul.ideas {
   .underline {
     margin-top: 21px;
     margin-bottom: 42px;
-  }
-
-  h1.smaller-title {
-    font-size: 2.1em;
   }
 
   /* Navbar positioning */
@@ -652,8 +653,5 @@ ul.ideas {
   #about-wrapper {
     padding-top: 0;
   }
-
-  h1.smaller-title {
-    font-size: 2.7em;
-  }
+  
 }
