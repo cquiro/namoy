@@ -12,16 +12,49 @@ RSpec.describe Recipe, type: :model do
     expect(recipe.errors[:name]).to include("can't be blank")
   end
 
+  it "is invalid with a name longer than 41 chars" do
+    recipe = build(:natural_recipe, name: "Forty-Two characters long recipe test name")
+    recipe.valid?
+    expect(recipe.errors[:name]).to include("is too long (maximum is 41 characters)")
+  end
+
+  it "is valid with a name 41 characters long" do
+    recipe = build(:natural_recipe, name: "Forty-One character long recipe test name")
+    expect(recipe).to be_valid
+  end
+
   it "is invalid without a time_ready" do
     recipe = build(:natural_recipe, time_ready: nil)
     recipe.valid?
     expect(recipe.errors[:time_ready]).to include("can't be blank")
   end
 
+  it "is invalid with a time_ready longer than 15 chars" do
+    recipe = build(:natural_recipe, time_ready: "16character name")
+    recipe.valid?
+    expect(recipe.errors[:time_ready]).to include("is too long (maximum is 15 characters)")
+  end
+
+  it "is valid with a time_ready 15 characters long" do
+    recipe = build(:natural_recipe, time_ready: "16charactername")
+    expect(recipe).to be_valid
+  end
+
   it "is invalid without a quantity" do
     recipe = build(:natural_recipe, quantity: nil)
     recipe.valid?
     expect(recipe.errors[:quantity]).to include("can't be blank")
+  end
+
+  it "is invalid with a quantity longer than 12 chars" do
+    recipe = build(:natural_recipe, quantity: "13 chars name")
+    recipe.valid?
+    expect(recipe.errors[:quantity]).to include("is too long (maximum is 12 characters)")
+  end
+
+  it "is valid with a quantity 12 characters long" do
+    recipe = build(:natural_recipe, quantity: "12 char name")
+    expect(recipe).to be_valid
   end
 
   it "is invalid without a flavor" do
