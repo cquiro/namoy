@@ -81,6 +81,13 @@ RSpec.describe Recipe, type: :model do
     expect(recipe.errors[:image]).to include("can't be blank")
   end
 
+  it "it splits a string on line breaks and store each line into an array" do
+    recipe = build(:natural_recipe)
+    paragraph = "This is line 1\nThis is line 2\nThis is line 3"
+    new_array = recipe.string_to_array(paragraph)
+    expect(new_array).to eq(["This is line 1", "This is line 2", "This is line 3"])
+  end
+
   it "has a valid factory" do
     expect(build(:natural_recipe)).to be_valid
   end  
