@@ -63,6 +63,11 @@ RSpec.describe Partner, type: :model do
     expect(partner.errors[:logo]).to include("can't be blank")
   end
 
+  it "retrieves the image name form the logo url" do
+    partner = build(:partner)
+    expect(partner.image_name).to eq("logo_blanco_letras.png")
+  end
+
   it "has a valid factory" do
     expect(build(:partner)).to be_valid
   end  
