@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.7'
+gem 'rails', '4.2.7.1'
 gem 'bcrypt', '3.1.11'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
