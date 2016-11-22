@@ -12,14 +12,13 @@
   <div class="col-md-8">
     <div class="form-container">
     <%= form_tag namoy_manejo_contenido_path do %>
-        <p>
+      <p>
         <% flash.each do |type, message| %>
           <div class="alert flash <%= type %>">
             <%= message %>
           </div>
         <% end %>
-        </p>
-      
+      </p>
 
       <div class="form-group">
         <%= label_tag :email, "Email", class: "lead" %>
